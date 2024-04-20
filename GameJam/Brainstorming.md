@@ -7,4 +7,14 @@ Design 1:
 	- Red enemies are resistant to red damage
 - Mix to produce proper weapons for mobs
 
+Design 2:
+- Pick up potions, potion have no effect on their own.
+- Use a alchemy craft to craft the potions together.
+- Creates a potion to give you a buff
+	- STR buff
+	- DEX buff
+	- Int Buff
+- Weapon damage you use on this buff depends STR/DEX/INT
+- Buff lasts X amount of time.
+
 Feed the Beast Theme:
