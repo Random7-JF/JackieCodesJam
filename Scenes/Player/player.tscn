@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bkp587x31icjn"]
+[gd_scene load_steps=43 format=3 uid="uid://bkp587x31icjn"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_x5ibn"]
 [ext_resource type="Texture2D" uid="uid://3vjivwegshjp" path="res://Assets/Adventurer-1.5/Individual Sprites/adventurer-idle-00.png" id="2_vo6n1"]
@@ -12,6 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://fg1cgwdqtpm4" path="res://Assets/Adventurer-1.5/Individual Sprites/adventurer-run-03.png" id="10_ndoap"]
 [ext_resource type="Texture2D" uid="uid://b3rhr00v8qg3t" path="res://Assets/Adventurer-1.5/Individual Sprites/adventurer-run-04.png" id="11_4den0"]
 [ext_resource type="Texture2D" uid="uid://blldi2fhxayis" path="res://Assets/Adventurer-1.5/Individual Sprites/adventurer-run-05.png" id="12_ytnyn"]
+[ext_resource type="Texture2D" uid="uid://cxg888hy7x1du" path="res://Assets/Adventurer-1.5/Individual Sprites/adventurer-attack1-00.png" id="13_rnsiu"]
+[ext_resource type="Texture2D" uid="uid://fcjbxj7encm4" path="res://Assets/Adventurer-1.5/Individual Sprites/adventurer-attack1-01.png" id="14_rgj42"]
+[ext_resource type="Texture2D" uid="uid://cfkgq8b47qp6r" path="res://Assets/Adventurer-1.5/Individual Sprites/adventurer-attack1-02.png" id="15_6nhwm"]
+[ext_resource type="Texture2D" uid="uid://c8ybr1xju4x8v" path="res://Assets/Adventurer-1.5/Individual Sprites/adventurer-attack1-03.png" id="16_doef8"]
+[ext_resource type="Texture2D" uid="uid://b78vmr1bd5xgk" path="res://Assets/Adventurer-1.5/Individual Sprites/adventurer-attack1-04.png" id="17_pmmhh"]
 
 [sub_resource type="Animation" id="Animation_nohif"]
 length = 0.001
@@ -117,13 +122,84 @@ tracks/1/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_qeh74"]
+resource_name = "attack_sword_right"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("13_rnsiu"), ExtResource("14_rgj42"), ExtResource("15_6nhwm"), ExtResource("16_doef8"), ExtResource("17_pmmhh")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_2tty1"]
+resource_name = "attack_sword_left"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("13_rnsiu"), ExtResource("14_rgj42"), ExtResource("15_6nhwm"), ExtResource("16_doef8"), ExtResource("17_pmmhh")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wnqgi"]
 _data = {
 "RESET": SubResource("Animation_nohif"),
+"attack_sword_left": SubResource("Animation_2tty1"),
+"attack_sword_right": SubResource("Animation_qeh74"),
 "idle": SubResource("Animation_tn0gs"),
 "run_left": SubResource("Animation_rqmak"),
 "run_right": SubResource("Animation_iqu5l")
 }
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4dvgk"]
+animation = &"attack_sword_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xhmi5"]
+animation = &"attack_sword_right"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_8hp53"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_4dvgk")
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_xhmi5")
+blend_point_1/pos = 1.0
+blend_mode = 1
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2n803"]
 animation = &"idle"
@@ -163,14 +239,34 @@ advance_condition = &"is_running"
 advance_mode = 2
 advance_condition = &"is_idling"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_roxvx"]
+advance_mode = 2
+advance_condition = &"is_attacking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_swmul"]
+switch_mode = 2
+advance_mode = 2
+advance_condition = &"is_idling"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3pdkv"]
+switch_mode = 2
+advance_mode = 2
+advance_condition = &"is_running"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8e7a3"]
+advance_mode = 2
+advance_condition = &"is_attacking"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_s7nhv"]
+states/Attack_Sword/node = SubResource("AnimationNodeBlendSpace1D_8hp53")
+states/Attack_Sword/position = Vector2(403, -17)
 states/Idle/node = SubResource("AnimationNodeBlendSpace1D_syw3f")
-states/Idle/position = Vector2(310, 100)
+states/Idle/position = Vector2(319, 100)
 states/Run/node = SubResource("AnimationNodeBlendSpace1D_u51jb")
 states/Run/position = Vector2(465, 100)
 states/Start/position = Vector2(154, 100)
-transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_xnuij"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_4bfa0"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_gex60")]
-graph_offset = Vector2(-326, -103)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_xnuij"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_4bfa0"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_gex60"), "Idle", "Attack_Sword", SubResource("AnimationNodeStateMachineTransition_roxvx"), "Attack_Sword", "Idle", SubResource("AnimationNodeStateMachineTransition_swmul"), "Attack_Sword", "Run", SubResource("AnimationNodeStateMachineTransition_3pdkv"), "Run", "Attack_Sword", SubResource("AnimationNodeStateMachineTransition_8e7a3")]
+graph_offset = Vector2(-383, -122)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aspwi"]
 size = Vector2(20, 27)
@@ -179,6 +275,7 @@ size = Vector2(20, 27)
 script = ExtResource("1_x5ibn")
 
 [node name="Sprite" type="Sprite2D" parent="."]
+z_index = 10
 texture = ExtResource("2_vo6n1")
 flip_h = true
 
@@ -188,10 +285,12 @@ libraries = {
 }
 tree_root = SubResource("AnimationNodeStateMachine_s7nhv")
 anim_player = NodePath("../AnimationPlayer")
+parameters/conditions/is_attacking = false
 parameters/conditions/is_idling = false
 parameters/conditions/is_running = false
+parameters/Attack_Sword/blend_position = 0.5
 parameters/Idle/blend_position = -0.9941
-parameters/Run/blend_position = -0.635135
+parameters/Run/blend_position = 0.5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -202,3 +301,5 @@ libraries = {
 visible = false
 position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_aspwi")
+
+[connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]

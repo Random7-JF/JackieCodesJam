@@ -28,7 +28,6 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = direction * SPEED
@@ -38,12 +37,22 @@ func _physics_process(delta):
 	move_and_slide()
 
 func update_animation():
-	animation_tree["parameters/Run/blend_position"] = velocity.normalized().x
+	var blend_value = velocity.normalized().x
+	if not velocity == Vector2.ZERO:
+		animation_tree["parameters/Run/blend_position"] = blend_value
+		animation_tree["parameters/Attack_Sword/blend_position"] = blend_value
 	if velocity == Vector2.ZERO:
 		animation_tree["parameters/conditions/is_idling"] = true
 		animation_tree["parameters/conditions/is_running"] = false
 	else:
 		animation_tree["parameters/conditions/is_idling"] = false
 		animation_tree["parameters/conditions/is_running"] = true
-	
+		
+	if Input.is_action_just_pressed("attack"):
+		animation_tree["parameters/conditions/is_attacking"] = true
+	else:
+		animation_tree["parameters/conditions/is_attacking"] = false
 
+func _on_animation_tree_animation_finished(anim_name):
+	pass
+ 
