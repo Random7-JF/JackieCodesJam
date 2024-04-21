@@ -18,3 +18,11 @@ Design 2:
 - Buff lasts X amount of time.
 
 Feed the Beast Theme:
+
+Art Style:
+
+World:
+https://free-game-assets.itch.io/free-swamp-2d-tileset-pixel-art
+Art:
+https://rvros.itch.io/animated-pixel-hero
+
