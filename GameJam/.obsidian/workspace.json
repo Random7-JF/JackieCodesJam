@@ -42,8 +42,8 @@
               "state": {
                 "file": "Systems/Alchemy/Alchemy.canvas",
                 "viewState": {
-                  "x": 211,
-                  "y": 88.83414015453675,
+                  "x": 213,
+                  "y": -11,
                   "zoom": 0
                 }
               }
@@ -178,15 +178,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "d06c5c043e25cf14",
+  "active": "da82b548044eb3c1",
   "lastOpenFiles": [
+    "Systems/Inventory/Diagram.md",
+    "Systems/Inventory/Inventory.canvas",
+    "Systems/Alchemy/Alchemy.canvas",
     "Systems/Alchemy",
     "Untitled",
-    "Systems/Inventory/Inventory.canvas",
-    "Systems/Inventory/Diagram.md",
     "Systems/Inventory",
     "Systems/Inventory/Excalidraw",
-    "Systems/Alchemy/Alchemy.canvas",
     "Systems",
     "Brainstorming.md",
     "Alchemy.md",

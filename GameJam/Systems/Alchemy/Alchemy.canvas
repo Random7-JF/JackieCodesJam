@@ -3,15 +3,17 @@
 		{"id":"3566407b54afdb8f","type":"text","text":"Alchemy Crafting System","x":20,"y":-400,"width":250,"height":60},
 		{"id":"c74f5ba0b7735dfb","type":"text","text":"Using three ingredients to make a potion.\n\nThe potion will have a modifier, catalyst and enhancer.\n\nModifier will set if its a STR, DEX, or INT buff\nCatalyst will determine the length of the buff\nEnhancer will add bonus damage to the attack as magic.","x":-118,"y":-320,"width":527,"height":220},
 		{"id":"16600eb20eac86cc","type":"text","text":"The player will need to acquire one of each type to make a potion and then use the alchemy craft interface to brew it.\nOnce the potion is brewed it will be usable from the inventory/hotbar","x":-118,"y":-80,"width":527,"height":120},
-		{"id":"60a4ae6aab574940","type":"text","text":"Modifier ","x":21,"y":140,"width":250,"height":60,"color":"6"},
-		{"id":"d52da6a2cbf73172","type":"text","text":"Catalyst","x":-179,"y":300,"width":250,"height":60,"color":"3"},
-		{"id":"256bb900252284bd","type":"text","text":"Enchancer","x":221,"y":300,"width":250,"height":60,"color":"2"}
+		{"id":"60a4ae6aab574940","type":"text","text":"Modifier ","x":21,"y":340,"width":250,"height":60,"color":"6"},
+		{"id":"d52da6a2cbf73172","type":"text","text":"Catalyst","x":-179,"y":500,"width":250,"height":60,"color":"3"},
+		{"id":"256bb900252284bd","type":"text","text":"Enchancer","x":221,"y":500,"width":250,"height":60,"color":"2"},
+		{"id":"9ad98210c63a0d2d","x":-118,"y":97,"width":527,"height":123,"type":"text","text":"Items drop from chests, crates and enemies. explore the world for drops to craft more potions."}
 	],
 	"edges":[
 		{"id":"0f05e76ada88ba30","fromNode":"d52da6a2cbf73172","fromSide":"top","toNode":"60a4ae6aab574940","toSide":"bottom","fromEnd":"arrow"},
 		{"id":"edc900cd0ed87ecc","fromNode":"60a4ae6aab574940","fromSide":"bottom","toNode":"256bb900252284bd","toSide":"top"},
 		{"id":"4e034ba0297627ec","fromNode":"d52da6a2cbf73172","fromSide":"bottom","toNode":"256bb900252284bd","toSide":"bottom","fromEnd":"arrow"},
 		{"id":"7c34da7e8d00a7d3","fromNode":"3566407b54afdb8f","fromSide":"bottom","toNode":"c74f5ba0b7735dfb","toSide":"top"},
-		{"id":"d54bf9db1c8001d1","fromNode":"c74f5ba0b7735dfb","fromSide":"bottom","toNode":"16600eb20eac86cc","toSide":"top"}
+		{"id":"d54bf9db1c8001d1","fromNode":"c74f5ba0b7735dfb","fromSide":"bottom","toNode":"16600eb20eac86cc","toSide":"top"},
+		{"id":"99e810dfd48e7b72","fromNode":"16600eb20eac86cc","fromSide":"bottom","toNode":"9ad98210c63a0d2d","toSide":"top"}
 	]
 }

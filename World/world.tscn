@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ccncouhyut8qx"]
+[gd_scene load_steps=11 format=3 uid="uid://ccncouhyut8qx"]
 
 [ext_resource type="TileSet" uid="uid://drhb2svipclmh" path="res://World/TileSet.tres" id="1_3t6vw"]
 [ext_resource type="PackedScene" uid="uid://da1i7ohb7qinm" path="res://Scenes/Objects/sign.tscn" id="2_1t53o"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bxbb7t3m8p0u8" path="res://Assets/free-swamp-game-tileset-pixel-art/4 Animated objects/Chest.png" id="8_ufgb0"]
 [ext_resource type="PackedScene" uid="uid://bb7ky0b7fem2x" path="res://Scenes/Objects/Box/box.tscn" id="9_ixxij"]
 [ext_resource type="PackedScene" uid="uid://bkp587x31icjn" path="res://Scenes/Player/player.tscn" id="10_2v5sf"]
+[ext_resource type="PackedScene" uid="uid://dg4l32xoaqskp" path="res://Scenes/Objects/Item/red_1_item.tscn" id="10_hl2jk"]
 
 [node name="World" type="Node2D"]
 
@@ -62,5 +63,9 @@ position = Vector2(219, 381)
 [node name="7" type="Sprite2D" parent="Willow"]
 texture = ExtResource("6_w23h5")
 
-[node name="Box" parent="." instance=ExtResource("9_ixxij")]
+[node name="Box" parent="." node_paths=PackedStringArray("item_node") instance=ExtResource("9_ixxij")]
 position = Vector2(393, 499)
+item = ExtResource("10_hl2jk")
+item_node = NodePath("../Items")
+
+[node name="Items" type="Node2D" parent="."]

@@ -1,0 +1,102 @@
+Alchemy XXL Set:
+
+001 – 	Knife			The most basic survival tool.
+002 – 	Calcinator		An alchemistic device to reduce ingredients to ash.	
+003 – 	Mortar&Pestle		An alchemistic device to turn ingredients into fine powder.
+004 – 	Beam Scale		A device to measure weight or mass.
+005 – 	Alembic			An alchemistic device to condense substances into potions.
+006 – 	Thermometer		This mercury thermometer can measure temperature.
+007 – 	Erlenmeyer Flask	A laboratory flask which features a flat bottom, a conical body and a cylindrical neck.
+008 – 	Bunsen Burner		A common piece of laboratory equipment that produces a single open gas flame.
+009 – 	Flask Cork		A cylindrical closure used to to seal a container like a flask.
+010 – 	Lilac			A species of flowering plant in the olive family.
+011 – 	Gardenia		A species of flowering plant in the coffee family.
+012 – 	Begonia			A plant native to tropical and subtropical climates.
+013 – 	Herb			A medical herb, grwoing in shadowy places.	
+014 – 	Root			Roots with curative powers.
+015 – 	Mandrake		It is said those roots have magical powers.
+016 – 	Cookie			A cookie with chokolate flakes.
+017 – 	Poison Cookie		A delicious looking cookie, imbued with dangerous poison.
+018 – 	Poison Apple		A delicious looking apple, imbued with dangerous poison.
+019 – 	Mushroom		A mushroom, usually found in forests.
+020 – 	Green Slime		Alchemistic ingredient, slimey secretion with unknown effects
+021 – 	Blue Slime		Alchemistic ingredient, slimey secretion with unknown effects
+022 – 	Red Slime		Alchemistic ingredient, slimey secretion with unknown effects
+023 – 	Scale			A scale from a fish or reptile.
+024 – 	Metallic Scale		A hard scale, from a monster with very hard skin.
+025 – 	Dragon Scale		A scale originating from the legendary beast: the dragon.
+026 – 	Pheasant Feather	A beautiful orange feather with black stripes
+027 – 	Quetzalcoatl Feather	A large, brillant feather of the Quetzal Bird, 
+028 – 	Gryphon Feather		A feather from the legendary Gryphon monster.
+029 – 	Bat Wing		A leathery wing of some flying creature.
+030 – 	Goat Hoof		A hoof with two claws, from a small demon or a got
+031 – 	Horse Hoof		A large, round hoof, from some horse.
+032 – 	Bear Claw		A bigclaw, possibly coming from a bear.
+033 – 	Ectoplasm		Secret which i sleft by ghosts, who enter the physical world.
+034 – 	Zombie Hand		Hand separated from a zombie, it’s still moving.
+035 – 	Zombie Brain		A Squishy rotten and infected human brain. 
+036 – 	Monster Eyeball		Alchemistic ingredient, it stares at you.
+037 – 	Reptile Eyeball		Alchemistic ingredient, it stares at you.
+038 – 	Demon Eyeball		Alchemistic ingredient, it stares at you.
+039 – 	Monster Tongue		A tongue, cut out from a dead monsters mouth.
+040 – 	Ivory			Priced material from the Tusks of big animals, like elephants, walruses or Hippos.
+041 – 	Sabrecat Toot		A long tooth, originating from a big feline.
+042 – 	Mammoth Tusk		A huge piece of ivory, originating from the huge and wooly mammoth.
+043 – 	Antlers			Deer Antlers with multiple ends, very hard.
+044 – 	Capricorn Horn		A huge horn of a carpricorn, a favoured hunting trophy.
+045 – 	Rhinoceros Horn		Horn of the Rhinoceros, it is said to have healing powers.
+046 – 	Monster Fin		A fin from some unknown monster.
+047 – 	Fish Fin		A fin from a huge fish.
+048 – 	Scales			The skin of a fish or reptile.
+049 – 	Crocodile Skin		The leathery skin of a crocodile, with hart bony plates.
+050 – 	Fox Fur			Orange fur, pretty fashionable.
+051 – 	Leather			Leather made from animal skin, can be used for armors and clothing.
+052 – 	Animal Fur		Warm and cozy, leather can be made from it.
+053 – 	Tiger Pelt		A striped pelt, taken from a tiger.
+054 – 	Polarbear Pelt		A white and very warm pelt, taken from a polarbear.
+055 – 	Tentacle		A tentacle of a squid creature, tasty, may still contain ink.
+056 – 	Shrimp Tail		Very nutritious.
+057 – 	Lizard Tail		A tail which was either cut off or intentionally left by a lizard.
+058 – 	Spider Leg		A thin leg from a huge spider.
+059 – 	Goblin Ear		An ear cut off from a goblin.
+060 – 	Alchemistic Powder	A magical powder, ingredient for potions.
+061 – 	White Powder		White powder, alchemistic ingredient.
+062 – 	Unicorn Horn		This horn is said to come from an unicorn.
+063 – 	Demon Horn		A huge and black horn of a demon.
+064 – 	Monster Heart		The heart of a monster.
+065 – 	Monster Guts		The guts of a monster.
+066 – 	Monster Liver		The Liver of a monster.
+067 – 	Monster Stomach		The stomach of a monster.
+068 – 	Sulfur			Alchemistic ingredient, a pale, yellow, nonmetallic element appaering.
+069 – 	Philosopher‘s Stone	A legendary stone, which can let miracles happen.
+070 – 	Empty Love Potion	An empty heart shaped flask – ideal for a love potion.
+071 – 	Love Potion		A potion, which is said to evoke one‘s undying love.
+072 – 	Sheet of Paper		an empty sheet of paper.
+073 – 	Apprentice Receipe	Common & simple difficulty recipe.	
+074 – 	Journeyman Recipe	Rare & medium difficulty recipe.
+075 – 	Master Receipe	Special & hard difficulty recipe.
+076 – 	Sheet of Paper		An empty sheet of paper.
+077 – 	Apprentice Receipe	Common & simple difficulty recipe.
+078 – 	Journeyman Recipe	Rare & medium difficulty recipe.
+079 – 	Master Receipe	Special & hard difficulty recipe.
+
+Line 9 – 	Vial XS
+Line10 – 	Vial S
+Line 11 – 	Vial M
+Line 12 – 	Vial L
+Line 13 – 	Vial XL
+Line 14 – 	Square Vieal
+Line 15 – 	Sealed Vial
+Line 16 – 	Skull Vial
+Line 17 – 	Moon Vial
+Line 18 – 	Sun Vial
+Line 19 – 	Ultra Vial
+Line 20 – 	Potion Vial
+Line 21 – 	Salve Vial
+Line 22 – 	Hyper Salve Vial
+Line 23 – 	Square Vial
+Line 24 – 	Heart Vial
+Line 25 – 	Round Vial
+Line 26 –	Belted Vial 
+Line 27 – 	Mason Jar
+Line 28 – 	Mug

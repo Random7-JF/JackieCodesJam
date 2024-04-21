@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://dg4l32xoaqskp"]
+
+[ext_resource type="Script" path="res://Scenes/Objects/Item/item.gd" id="1_klf5x"]
+[ext_resource type="Script" path="res://Resources/Alchemy/alchemy.gd" id="2_u3nag"]
+[ext_resource type="Texture2D" uid="uid://di2t63y7e727i" path="res://icon.svg" id="3_am5us"]
+
+[sub_resource type="Resource" id="Resource_6trnf"]
+script = ExtResource("2_u3nag")
+name = "Red_1"
+texture = ExtResource("3_am5us")
+type = 0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_it0ak"]
+radius = 4.0
+
+[node name="red_1" type="Area2D"]
+script = ExtResource("1_klf5x")
+item_data = SubResource("Resource_6trnf")
+spawn_time = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_it0ak")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
