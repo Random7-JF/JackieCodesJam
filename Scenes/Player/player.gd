@@ -7,10 +7,12 @@ const JUMP_VELOCITY = -350.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var can_double_jump: bool = true
+var is_attacking: bool = false
 
 @onready var animation_tree: AnimationTree = $AnimationTree
+@onready var attack_sword_area: Area2D = $AttackSword
 
-func _process(delta):
+func _process(_delta):
 	update_animation()
 
 func _physics_process(delta):
@@ -49,10 +51,16 @@ func update_animation():
 		animation_tree["parameters/conditions/is_running"] = true
 		
 	if Input.is_action_just_pressed("attack"):
+		is_attacking = true
 		animation_tree["parameters/conditions/is_attacking"] = true
-	else:
-		animation_tree["parameters/conditions/is_attacking"] = false
+
 
 func _on_animation_tree_animation_finished(anim_name):
-	pass
+	print("anim_name: ", anim_name)
+	if anim_name == "attack_sword_left" or anim_name == "attack_sword_right":
+		is_attacking = false
+		animation_tree["parameters/conditions/is_attacking"] = false
  
+func get_is_attacking() -> bool:
+	print("get_is_attacking")
+	return is_attacking
