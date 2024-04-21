@@ -13,53 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://b3rhr00v8qg3t" path="res://Assets/Adventurer-1.5/Individual Sprites/adventurer-run-04.png" id="11_4den0"]
 [ext_resource type="Texture2D" uid="uid://blldi2fhxayis" path="res://Assets/Adventurer-1.5/Individual Sprites/adventurer-run-05.png" id="12_ytnyn"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2n803"]
-animation = &"idle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1tss8"]
-animation = &"idle"
-
-[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_syw3f"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_2n803")
-blend_point_0/pos = -1.0
-blend_point_1/node = SubResource("AnimationNodeAnimation_1tss8")
-blend_point_1/pos = 1.0
-blend_mode = 1
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pc0wn"]
-animation = &"run_left"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_00phr"]
-animation = &"run_right"
-
-[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_u51jb"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_pc0wn")
-blend_point_0/pos = -1.0
-blend_point_1/node = SubResource("AnimationNodeAnimation_00phr")
-blend_point_1/pos = 1.0
-blend_mode = 1
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xnuij"]
-advance_mode = 2
-advance_condition = &"is_idling"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4bfa0"]
-advance_mode = 2
-advance_condition = &"is_running"
-
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gex60"]
-advance_mode = 2
-advance_condition = &"is_idling"
-
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_s7nhv"]
-states/Idle/node = SubResource("AnimationNodeBlendSpace1D_syw3f")
-states/Idle/position = Vector2(310, 100)
-states/Run/node = SubResource("AnimationNodeBlendSpace1D_u51jb")
-states/Run/position = Vector2(465, 100)
-states/Start/position = Vector2(154, 100)
-transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_xnuij"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_4bfa0"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_gex60")]
-graph_offset = Vector2(-326, -103)
-
 [sub_resource type="Animation" id="Animation_nohif"]
 length = 0.001
 tracks/0/type = "value"
@@ -172,6 +125,53 @@ _data = {
 "run_right": SubResource("Animation_iqu5l")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2n803"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1tss8"]
+animation = &"idle"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_syw3f"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_2n803")
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_1tss8")
+blend_point_1/pos = 1.0
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pc0wn"]
+animation = &"run_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_00phr"]
+animation = &"run_right"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_u51jb"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_pc0wn")
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_00phr")
+blend_point_1/pos = 1.0
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xnuij"]
+advance_mode = 2
+advance_condition = &"is_idling"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4bfa0"]
+advance_mode = 2
+advance_condition = &"is_running"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gex60"]
+advance_mode = 2
+advance_condition = &"is_idling"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_s7nhv"]
+states/Idle/node = SubResource("AnimationNodeBlendSpace1D_syw3f")
+states/Idle/position = Vector2(310, 100)
+states/Run/node = SubResource("AnimationNodeBlendSpace1D_u51jb")
+states/Run/position = Vector2(465, 100)
+states/Start/position = Vector2(154, 100)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_xnuij"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_4bfa0"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_gex60")]
+graph_offset = Vector2(-326, -103)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aspwi"]
 size = Vector2(20, 27)
 
@@ -183,6 +183,9 @@ texture = ExtResource("2_vo6n1")
 flip_h = true
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wnqgi")
+}
 tree_root = SubResource("AnimationNodeStateMachine_s7nhv")
 anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/is_idling = false
