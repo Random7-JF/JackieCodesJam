@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2wnfg"]
 size = Vector2(30, 24)
 
-[node name="Box" type="Area2D"]
+[node name="Box" type="Area2D" groups=["breakable"]]
 script = ExtResource("1_8rydi")
 
 [node name="Sprite" type="Sprite2D" parent="."]
@@ -15,5 +15,3 @@ texture = ExtResource("1_4gpoc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_2wnfg")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
