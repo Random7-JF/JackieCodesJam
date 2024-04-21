@@ -13,7 +13,6 @@ var can_double_jump: bool = true
 func _process(_delta):
 	if Input.is_action_just_pressed("attack"):
 		attack()
-
 	update_animation()
 
 func _physics_process(delta):
@@ -56,7 +55,6 @@ func update_animation():
 		animation_tree["parameters/conditions/is_running"] = true
 
 func _on_animation_tree_animation_finished(anim_name):
-	print("anim_name: ", anim_name)
 	if anim_name == "attack_sword_left" or anim_name == "attack_sword_right":
 		animation_tree["parameters/conditions/is_attacking"] = false
  

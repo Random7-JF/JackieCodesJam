@@ -18,8 +18,39 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "1ccff96c6c5a3e9e",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Systems/Inventory/Inventory.canvas",
+                "viewState": {
+                  "x": 154,
+                  "y": -39,
+                  "zoom": 0
+                }
+              }
+            }
+          },
+          {
+            "id": "da82b548044eb3c1",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Systems/Alchemy/Alchemy.canvas",
+                "viewState": {
+                  "x": 211,
+                  "y": 88.83414015453675,
+                  "zoom": 0
+                }
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Brainstorming.md",
+                "file": "Systems/Alchemy/Alchemy.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Brainstorming.md",
+                "file": "Systems/Alchemy/Alchemy.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Brainstorming.md"
+                "file": "Systems/Alchemy/Alchemy.canvas"
               }
             }
           }
@@ -143,12 +174,22 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "4e15a8e737b03f57",
+  "active": "d06c5c043e25cf14",
   "lastOpenFiles": [
-    "Welcome.md",
-    "Brainstorming.md"
+    "Systems/Alchemy",
+    "Untitled",
+    "Systems/Inventory/Inventory.canvas",
+    "Systems/Inventory/Diagram.md",
+    "Systems/Inventory",
+    "Systems/Inventory/Excalidraw",
+    "Systems/Alchemy/Alchemy.canvas",
+    "Systems",
+    "Brainstorming.md",
+    "Alchemy.md",
+    "Welcome.md"
   ]
 }

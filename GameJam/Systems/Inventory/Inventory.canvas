@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"ec7c7a559602843f","type":"text","text":"Character Inventory","x":-100,"y":-360,"width":250,"height":60},
+		{"id":"6ebb8bb6c5921549","type":"text","text":"The inventory will be setup to store items, coins and keys in a specific way\n\nThis is to make the managing the inventory straight forward and able to see status of the items at a glance.","x":-183,"y":-180,"width":417,"height":168},
+		{"id":"8ac276aa5924c542","x":-531,"y":80,"width":1114,"height":940,"type":"file","file":"Systems/Inventory/Diagram.md"}
+	],
+	"edges":[
+		{"id":"baf000d24420aed4","fromNode":"ec7c7a559602843f","fromSide":"bottom","toNode":"6ebb8bb6c5921549","toSide":"top"},
+		{"id":"9e02c61ed8f1d45d","fromNode":"8ac276aa5924c542","fromSide":"top","toNode":"6ebb8bb6c5921549","toSide":"bottom","fromEnd":"arrow"}
+	]
+}

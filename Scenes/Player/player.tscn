@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://bkp587x31icjn"]
+[gd_scene load_steps=45 format=3 uid="uid://bkp587x31icjn"]
 
 [ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_x5ibn"]
 [ext_resource type="Texture2D" uid="uid://3vjivwegshjp" path="res://Assets/Adventurer-1.5/Individual Sprites/adventurer-idle-00.png" id="2_vo6n1"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://cfkgq8b47qp6r" path="res://Assets/Adventurer-1.5/Individual Sprites/adventurer-attack1-02.png" id="15_6nhwm"]
 [ext_resource type="Texture2D" uid="uid://c8ybr1xju4x8v" path="res://Assets/Adventurer-1.5/Individual Sprites/adventurer-attack1-03.png" id="16_doef8"]
 [ext_resource type="Texture2D" uid="uid://b78vmr1bd5xgk" path="res://Assets/Adventurer-1.5/Individual Sprites/adventurer-attack1-04.png" id="17_pmmhh"]
+[ext_resource type="Script" path="res://Scenes/Player/AttackSword.gd" id="18_f11y1"]
 
 [sub_resource type="Animation" id="Animation_nohif"]
 length = 0.001
@@ -43,18 +44,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AttackSword/CollisionShape2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-15, -1.5)]
 }
 
 [sub_resource type="Animation" id="Animation_tn0gs"]
@@ -161,18 +150,6 @@ tracks/1/keys = {
 "update": 1,
 "values": [false]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AttackSword/CollisionShape2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(15, 1.5)]
-}
 
 [sub_resource type="Animation" id="Animation_2tty1"]
 resource_name = "attack_sword_left"
@@ -200,18 +177,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("AttackSword/CollisionShape2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-15, -1.5)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wnqgi"]
@@ -341,9 +306,10 @@ position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_aspwi")
 
 [node name="AttackSword" type="Area2D" parent="."]
+script = ExtResource("18_f11y1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackSword"]
-position = Vector2(-15, -1.5)
+position = Vector2(15, 1.5)
 shape = SubResource("RectangleShape2D_v5aog")
 
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
