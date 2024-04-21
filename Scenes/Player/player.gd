@@ -32,9 +32,12 @@ func _physics_process(delta):
 	move_and_slide()
 
 func update_animation():
+	animation_tree["parameters/Run/blend_position"] = velocity.normalized().x
 	if velocity == Vector2.ZERO:
-		animation_tree["parameters/conditions/idle"] = true
-		animation_tree["parameters/conditions/move"] = false
+		animation_tree["parameters/conditions/is_idling"] = true
+		animation_tree["parameters/conditions/is_running"] = false
 	else:
-		animation_tree["parameters/conditions/idle"] = false
-		animation_tree["parameters/conditions/move"] = true
+		animation_tree["parameters/conditions/is_idling"] = false
+		animation_tree["parameters/conditions/is_running"] = true
+	
+
