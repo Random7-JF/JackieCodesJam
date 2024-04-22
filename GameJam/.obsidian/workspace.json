@@ -31,7 +31,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Weapon modify.md",
+                "file": "Todo/Notes/Weapon modify.md",
                 "mode": "source",
                 "source": false
               }
@@ -50,7 +50,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Item drop handling.md",
+                "file": "Todo/Notes/Item drop handling.md",
                 "mode": "source",
                 "source": false
               }
@@ -186,9 +186,10 @@
   },
   "active": "1b82c332ac5f1bbf",
   "lastOpenFiles": [
-    "Weapon modify.md",
-    "Item drop handling.md",
+    "Todo/Notes/Item drop handling.md",
     "Todo/WIP.md",
+    "Todo/Notes",
+    "Todo/Notes/Weapon modify.md",
     "Brainstorming.md",
     "Todo",
     "Systems/Loot/Drops.canvas",
