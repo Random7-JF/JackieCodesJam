@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgbopk22sj467"]
+
+[ext_resource type="Script" path="res://Scenes/Objects/Item/item.gd" id="1_b67ok"]
+[ext_resource type="Resource" uid="uid://ij068gj7sdvb" path="res://Resources/Alchemy/alchemy_mod_3.tres" id="2_dn67t"]
+[ext_resource type="Texture2D" uid="uid://b8yc85i02k20t" path="res://Assets/16x16_Iconset_AlchemyXXL_v1_1/icons/monster_part4.png" id="3_kux8i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_it0ak"]
+radius = 8.0
+
+[node name="blue_1" type="Area2D"]
+script = ExtResource("1_b67ok")
+item_data = ExtResource("2_dn67t")
+spawn_time = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_it0ak")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_kux8i")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

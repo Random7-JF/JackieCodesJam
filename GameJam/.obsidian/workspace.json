@@ -6,19 +6,53 @@
       {
         "id": "fd449b872af1b079",
         "type": "tabs",
+        "dimension": 44.79025710419486,
         "children": [
           {
             "id": "1b82c332ac5f1bbf",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "kanban",
               "state": {
-                "file": "Systems/Alchemy/Alchemy.canvas",
-                "viewState": {
-                  "x": 538.5,
-                  "y": 247,
-                  "zoom": 0
-                }
+                "file": "Todo/WIP.md"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "9af9951f35cc3a1e",
+        "type": "tabs",
+        "dimension": 21.876409562471807,
+        "children": [
+          {
+            "id": "17cf90edba26a974",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Weapon modify.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "7ff3d695c3d927a6",
+        "type": "tabs",
+        "dimension": 33.33333333333333,
+        "children": [
+          {
+            "id": "9a1353729bc5a133",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Item drop handling.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -88,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Systems/Alchemy/Alchemy.canvas",
+                "file": "Todo/WIP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Systems/Alchemy/Alchemy.canvas",
+                "file": "Todo/WIP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Systems/Alchemy/Alchemy.canvas"
+                "file": "Todo/WIP.md"
               }
             }
           }
@@ -152,11 +186,15 @@
   },
   "active": "1b82c332ac5f1bbf",
   "lastOpenFiles": [
-    "Systems/Inventory/Diagram.md",
-    "Systems/Inventory/Inventory.canvas",
+    "Weapon modify.md",
+    "Item drop handling.md",
+    "Todo/WIP.md",
+    "Brainstorming.md",
+    "Todo",
     "Systems/Loot/Drops.canvas",
     "Systems/Alchemy/Alchemy.canvas",
-    "Brainstorming.md",
+    "Systems/Inventory/Diagram.md",
+    "Systems/Inventory/Inventory.canvas",
     "Systems/Loot",
     "Systems/Alchemy",
     "Systems/Inventory",

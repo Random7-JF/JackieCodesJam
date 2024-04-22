@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Alchemy" load_steps=3 format=3 uid="uid://ij068gj7sdvb"]
+
+[ext_resource type="Script" path="res://Resources/Alchemy/alchemy.gd" id="1_fnolw"]
+[ext_resource type="Texture2D" uid="uid://011tdocekdg1" path="res://Assets/16x16_Iconset_AlchemyXXL_v1_1/icons/blue_slime.png" id="2_pxv1b"]
+
+[resource]
+script = ExtResource("1_fnolw")
+name = "Blue"
+texture = ExtResource("2_pxv1b")
+type = 0

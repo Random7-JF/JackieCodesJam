@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Alchemy" load_steps=3 format=3 uid="uid://c82vd4kel8shw"]
 
 [ext_resource type="Script" path="res://Resources/Alchemy/alchemy.gd" id="1_4ftky"]
-[ext_resource type="Texture2D" uid="uid://di2t63y7e727i" path="res://icon.svg" id="2_2gjso"]
+[ext_resource type="Texture2D" uid="uid://bhvi1i80skoym" path="res://Assets/16x16_Iconset_AlchemyXXL_v1_1/icons/frog.png" id="2_6lvsn"]
 
 [resource]
 script = ExtResource("1_4ftky")
-name = "Test"
-texture = ExtResource("2_2gjso")
+name = "Green"
+texture = ExtResource("2_6lvsn")
 type = 0
