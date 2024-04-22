@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://brjeaaatfq430"]
+[gd_scene load_steps=8 format=3 uid="uid://brjeaaatfq430"]
 
 [ext_resource type="Texture2D" uid="uid://bpcpnklh6pys3" path="res://Assets/free-swamp-game-tileset-pixel-art/4 Animated objects/Key.png" id="1_ll10c"]
 [ext_resource type="Script" path="res://Scenes/Objects/Key/key.gd" id="1_prot4"]
+[ext_resource type="PackedScene" uid="uid://bc1a25xruo0sk" path="res://Scenes/Objects/Interact/interact.tscn" id="3_6qcx5"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7336w"]
-size = Vector2(14, 10)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rvtd0"]
+size = Vector2(35, 16)
 
 [sub_resource type="Animation" id="Animation_ssjuh"]
 resource_name = "key_bounce"
@@ -45,7 +46,7 @@ _data = {
 "key_bounce": SubResource("Animation_ssjuh")
 }
 
-[node name="key" type="Area2D"]
+[node name="key" type="Node2D"]
 script = ExtResource("1_prot4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -54,11 +55,17 @@ texture = ExtResource("1_ll10c")
 hframes = 4
 frame = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -1)
-shape = SubResource("RectangleShape2D_7336w")
+[node name="Interact" parent="." instance=ExtResource("3_6qcx5")]
+action_name = "Pickup"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact"]
+position = Vector2(-0.5, -2)
+shape = SubResource("RectangleShape2D_rvtd0")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_jevu6")
 }
+
+[connection signal="body_entered" from="Interact" to="." method="_on_interact_body_entered"]
+[connection signal="body_exited" from="Interact" to="." method="_on_interact_body_exited"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://nhrct8f1p50x"]
+[gd_scene load_steps=8 format=3 uid="uid://nhrct8f1p50x"]
 
 [ext_resource type="Script" path="res://Scenes/Objects/Chest/chest.gd" id="1_c4roi"]
 [ext_resource type="Texture2D" uid="uid://bxbb7t3m8p0u8" path="res://Assets/free-swamp-game-tileset-pixel-art/4 Animated objects/Chest.png" id="1_ownax"]
+[ext_resource type="PackedScene" uid="uid://bc1a25xruo0sk" path="res://Scenes/Objects/Interact/interact.tscn" id="3_vj55l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m16ud"]
 size = Vector2(26, 21)
@@ -43,14 +44,17 @@ _data = {
 "chest_open": SubResource("Animation_int5q")
 }
 
-[node name="chest" type="Area2D" groups=["interactable"]]
+[node name="chest" type="Node2D" groups=["interactable"]]
 script = ExtResource("1_c4roi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ownax")
 hframes = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Interact" parent="." instance=ExtResource("3_vj55l")]
+action_name = "Open"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact"]
 position = Vector2(-3, 5.5)
 shape = SubResource("RectangleShape2D_m16ud")
 
@@ -58,3 +62,6 @@ shape = SubResource("RectangleShape2D_m16ud")
 libraries = {
 "": SubResource("AnimationLibrary_jp7fp")
 }
+
+[connection signal="body_entered" from="Interact" to="." method="_on_interact_body_entered"]
+[connection signal="body_exited" from="Interact" to="." method="_on_interact_body_exited"]

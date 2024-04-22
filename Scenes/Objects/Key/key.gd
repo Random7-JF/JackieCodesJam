@@ -1,12 +1,19 @@
-extends Area2D
+extends Node2D
 
 @onready var anim: AnimationPlayer = $AnimationPlayer
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	anim.play("key_bounce")
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _on_interact_body_entered(body):
+	print(body)
+	if body.is_in_group("player"):
+		$Interact.activate()
+		print("Player found")
+
+
+func _on_interact_body_exited(body):
+	if body.is_in_group("player"):
+		$Interact.deactivate()
+		print("Player Left")

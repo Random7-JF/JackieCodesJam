@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Todo/WIP.md",
+                "file": "Todo/Notes/Item drop handling.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Todo/WIP.md",
+                "file": "Todo/Notes/Item drop handling.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Todo/WIP.md"
+                "file": "Todo/Notes/Item drop handling.md"
               }
             }
           }
@@ -184,10 +184,10 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "1b82c332ac5f1bbf",
+  "active": "9a1353729bc5a133",
   "lastOpenFiles": [
-    "Todo/Notes/Item drop handling.md",
     "Todo/WIP.md",
+    "Todo/Notes/Item drop handling.md",
     "Todo/Notes",
     "Todo/Notes/Weapon modify.md",
     "Brainstorming.md",
