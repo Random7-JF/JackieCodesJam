@@ -7,5 +7,5 @@ func break_box():
 	for item in items:
 		var instance = item.instantiate()
 		item_node.add_child(instance)
-		instance.position = position
+		instance.global_position = $Spawnpoint.global_position
 	call_deferred("queue_free")

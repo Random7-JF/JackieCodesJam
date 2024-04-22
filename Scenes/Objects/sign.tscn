@@ -1,10 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://da1i7ohb7qinm"]
+[gd_scene load_steps=5 format=3 uid="uid://da1i7ohb7qinm"]
 
 [ext_resource type="Script" path="res://Scenes/Objects/Sign/sign.gd" id="1_ble7s"]
 [ext_resource type="Texture2D" uid="uid://d21iboy222dbp" path="res://Assets/free-swamp-game-tileset-pixel-art/3 Objects/Pointers/1.png" id="1_jddty"]
+[ext_resource type="PackedScene" uid="uid://bc1a25xruo0sk" path="res://Scenes/Objects/Interact/interact.tscn" id="2_5ex72"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jj313"]
+size = Vector2(28, 18)
 
 [node name="Sign" type="Node2D"]
 script = ExtResource("1_ble7s")
 
+[node name="Interact" parent="." instance=ExtResource("2_5ex72")]
+type = 1
+message = "Break Boxes for Items"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact"]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_jj313")
+
 [node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_jddty")
+
+[connection signal="body_entered" from="Interact" to="." method="_on_interact_body_entered"]
+[connection signal="body_exited" from="Interact" to="." method="_on_interact_body_exited"]
