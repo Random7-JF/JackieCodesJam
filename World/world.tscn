@@ -3,10 +3,10 @@
 [ext_resource type="TileSet" uid="uid://drhb2svipclmh" path="res://World/TileSet.tres" id="1_3t6vw"]
 [ext_resource type="PackedScene" uid="uid://da1i7ohb7qinm" path="res://Scenes/Objects/sign.tscn" id="2_1t53o"]
 [ext_resource type="Texture2D" uid="uid://3s65pr7nxvra" path="res://Assets/free-swamp-game-tileset-pixel-art/3 Objects/Grass/10.png" id="2_73id7"]
+[ext_resource type="PackedScene" uid="uid://nhrct8f1p50x" path="res://Scenes/Objects/Chest/chest.tscn" id="5_sc2sn"]
 [ext_resource type="Texture2D" uid="uid://dpu7dvvpxbj7b" path="res://Assets/free-swamp-game-tileset-pixel-art/3 Objects/Stones/4.png" id="6_fdgo3"]
 [ext_resource type="Texture2D" uid="uid://bk60qaqphgv3i" path="res://Assets/free-swamp-game-tileset-pixel-art/3 Objects/Willows/1.png" id="6_w23h5"]
 [ext_resource type="Texture2D" uid="uid://dlgh4ptonxjv3" path="res://Assets/free-swamp-game-tileset-pixel-art/3 Objects/Ridges/5.png" id="7_y7k2h"]
-[ext_resource type="Texture2D" uid="uid://bxbb7t3m8p0u8" path="res://Assets/free-swamp-game-tileset-pixel-art/4 Animated objects/Chest.png" id="8_ufgb0"]
 [ext_resource type="PackedScene" uid="uid://bb7ky0b7fem2x" path="res://Scenes/Objects/Box/box.tscn" id="9_ixxij"]
 [ext_resource type="PackedScene" uid="uid://bkp587x31icjn" path="res://Scenes/Player/player.tscn" id="10_2v5sf"]
 [ext_resource type="PackedScene" uid="uid://dg4l32xoaqskp" path="res://Scenes/Objects/Item/red_1_item.tscn" id="10_hl2jk"]
@@ -27,45 +27,45 @@ layer_0/tile_data = PackedInt32Array(983042, 65536, 1, 1048578, 65536, 1, 111411
 layer_1/name = "Object"
 layer_1/tile_data = PackedInt32Array()
 
-[node name="Grass" type="Node2D" parent="."]
+[node name="Box" parent="." node_paths=PackedStringArray("item_node") instance=ExtResource("9_ixxij")]
+position = Vector2(393, 499)
+items = Array[PackedScene]([ExtResource("10_hl2jk"), ExtResource("10_hl2jk")])
+item_node = NodePath("../Items")
 
-[node name="10" type="Sprite2D" parent="Grass"]
+[node name="chest" parent="." instance=ExtResource("5_sc2sn")]
+position = Vector2(525, 401)
+
+[node name="Items" type="Node2D" parent="."]
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="Grass" type="Node2D" parent="Environment"]
+
+[node name="10" type="Sprite2D" parent="Environment/Grass"]
 position = Vector2(113, 443)
 texture = ExtResource("2_73id7")
 
-[node name="Sign" parent="." instance=ExtResource("2_1t53o")]
+[node name="Sign" parent="Environment" instance=ExtResource("2_1t53o")]
 position = Vector2(64, 438)
 
-[node name="Stone" type="Node2D" parent="."]
+[node name="Stone" type="Node2D" parent="Environment"]
 position = Vector2(455, 499)
 
-[node name="7" type="Sprite2D" parent="Stone"]
+[node name="7" type="Sprite2D" parent="Environment/Stone"]
 position = Vector2(-294, -65)
 texture = ExtResource("6_fdgo3")
 
-[node name="Log" type="Node2D" parent="."]
+[node name="Log" type="Node2D" parent="Environment"]
 
-[node name="7" type="Sprite2D" parent="Log"]
+[node name="7" type="Sprite2D" parent="Environment/Log"]
 position = Vector2(590, 466)
 texture = ExtResource("7_y7k2h")
 
-[node name="Log2" type="Node2D" parent="."]
-position = Vector2(522, 401)
-
-[node name="7" type="Sprite2D" parent="Log2"]
-texture = ExtResource("8_ufgb0")
-region_enabled = true
-region_rect = Rect2(0, 0, 26, 32)
-
-[node name="Willow" type="Node2D" parent="."]
+[node name="Willow" type="Node2D" parent="Environment"]
 position = Vector2(219, 381)
 
-[node name="7" type="Sprite2D" parent="Willow"]
+[node name="7" type="Sprite2D" parent="Environment/Willow"]
 texture = ExtResource("6_w23h5")
 
-[node name="Box" parent="." node_paths=PackedStringArray("item_node") instance=ExtResource("9_ixxij")]
-position = Vector2(393, 499)
-item = ExtResource("10_hl2jk")
-item_node = NodePath("../Items")
-
-[node name="Items" type="Node2D" parent="."]
+[node name="chest2" parent="." instance=ExtResource("5_sc2sn")]
+position = Vector2(44, 433)

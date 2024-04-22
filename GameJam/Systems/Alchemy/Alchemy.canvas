@@ -1,12 +1,16 @@
 {
 	"nodes":[
-		{"id":"3566407b54afdb8f","type":"text","text":"Alchemy Crafting System","x":20,"y":-400,"width":250,"height":60},
-		{"id":"c74f5ba0b7735dfb","type":"text","text":"Using three ingredients to make a potion.\n\nThe potion will have a modifier, catalyst and enhancer.\n\nModifier will set if its a STR, DEX, or INT buff\nCatalyst will determine the length of the buff\nEnhancer will add bonus damage to the attack as magic.","x":-118,"y":-320,"width":527,"height":220},
 		{"id":"16600eb20eac86cc","type":"text","text":"The player will need to acquire one of each type to make a potion and then use the alchemy craft interface to brew it.\nOnce the potion is brewed it will be usable from the inventory/hotbar","x":-118,"y":-80,"width":527,"height":120},
 		{"id":"60a4ae6aab574940","type":"text","text":"Modifier ","x":21,"y":340,"width":250,"height":60,"color":"6"},
 		{"id":"d52da6a2cbf73172","type":"text","text":"Catalyst","x":-179,"y":500,"width":250,"height":60,"color":"3"},
 		{"id":"256bb900252284bd","type":"text","text":"Enchancer","x":221,"y":500,"width":250,"height":60,"color":"2"},
-		{"id":"9ad98210c63a0d2d","x":-118,"y":97,"width":527,"height":123,"type":"text","text":"Items drop from chests, crates and enemies. explore the world for drops to craft more potions."}
+		{"id":"9ad98210c63a0d2d","type":"text","text":"Items drop from chests, crates and enemies. explore the world for drops to craft more potions.","x":-118,"y":97,"width":527,"height":123},
+		{"id":"3489586460b2bd68","type":"text","text":"Boxes Drop Catalysts","x":678,"y":-28,"width":250,"height":60},
+		{"id":"e4cd18a1a9c12467","type":"text","text":"Monsters Drop Enhancers","x":678,"y":72,"width":250,"height":50},
+		{"id":"521c154f495a77d8","type":"text","text":"Chests Drop Modifiers","x":678,"y":159,"width":250,"height":60},
+		{"id":"c74f5ba0b7735dfb","type":"text","text":"Using three ingredients to make a potion.\n\nThe potion will have a modifier, catalyst and enhancer.\n\nModifier will set if its a STR, DEX, or INT buff\nCatalyst will determine the length of the buff\nEnhancer will add bonus damage to the attack as magic.","x":-118,"y":-340,"width":527,"height":220},
+		{"id":"3566407b54afdb8f","type":"text","text":"Alchemy Crafting System","x":21,"y":-440,"width":250,"height":60},
+		{"id":"fe725df8ff9b5225","type":"file","file":"Systems/Loot/Drops.canvas","x":1060,"y":-28,"width":400,"height":400}
 	],
 	"edges":[
 		{"id":"0f05e76ada88ba30","fromNode":"d52da6a2cbf73172","fromSide":"top","toNode":"60a4ae6aab574940","toSide":"bottom","fromEnd":"arrow"},
@@ -14,6 +18,12 @@
 		{"id":"4e034ba0297627ec","fromNode":"d52da6a2cbf73172","fromSide":"bottom","toNode":"256bb900252284bd","toSide":"bottom","fromEnd":"arrow"},
 		{"id":"7c34da7e8d00a7d3","fromNode":"3566407b54afdb8f","fromSide":"bottom","toNode":"c74f5ba0b7735dfb","toSide":"top"},
 		{"id":"d54bf9db1c8001d1","fromNode":"c74f5ba0b7735dfb","fromSide":"bottom","toNode":"16600eb20eac86cc","toSide":"top"},
-		{"id":"99e810dfd48e7b72","fromNode":"16600eb20eac86cc","fromSide":"bottom","toNode":"9ad98210c63a0d2d","toSide":"top"}
+		{"id":"99e810dfd48e7b72","fromNode":"16600eb20eac86cc","fromSide":"bottom","toNode":"9ad98210c63a0d2d","toSide":"top"},
+		{"id":"b75baedaf5c71927","fromNode":"9ad98210c63a0d2d","fromSide":"right","toNode":"3489586460b2bd68","toSide":"left"},
+		{"id":"9207cd0350d83f91","fromNode":"9ad98210c63a0d2d","fromSide":"right","toNode":"e4cd18a1a9c12467","toSide":"left"},
+		{"id":"bc6fc6f6b9b0f440","fromNode":"9ad98210c63a0d2d","fromSide":"right","toNode":"521c154f495a77d8","toSide":"left"},
+		{"id":"581167ef91f95e8c","fromNode":"3489586460b2bd68","fromSide":"right","toNode":"fe725df8ff9b5225","toSide":"left"},
+		{"id":"8aff7965eeb92abd","fromNode":"e4cd18a1a9c12467","fromSide":"right","toNode":"fe725df8ff9b5225","toSide":"left"},
+		{"id":"544b2f86272a7a82","fromNode":"521c154f495a77d8","fromSide":"right","toNode":"fe725df8ff9b5225","toSide":"left"}
 	]
 }

@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"4fede130c4d065d7","x":-20,"y":-340,"width":250,"height":60,"type":"text","text":"Loot can be found in many different ways."},
+		{"id":"e8b2dc32ed273f5b","x":260,"y":-181,"width":250,"height":60,"color":"2","type":"text","text":"Chests will Drop Modifiers"},
+		{"id":"e59694a070e77d28","x":-320,"y":-176,"width":250,"height":50,"color":"4","type":"text","text":"Boxes:\nWill drop Catalysts"},
+		{"id":"b975d6dfd5c96401","x":-20,"y":-181,"width":250,"height":60,"color":"3","type":"text","text":"Monsters:\nWill drop Enhancers"},
+		{"id":"548eca1bac74ac2c","x":260,"y":40,"width":250,"height":60,"type":"text","text":"Chests will Require keys to be opened"},
+		{"id":"65b9594155723893","x":-445,"y":40,"width":250,"height":60,"type":"text","text":"Smash boxes open to get their Loot\n"},
+		{"id":"5e774b0ced837c07","x":-100,"y":40,"width":250,"height":62,"type":"text","text":"Kill monsters with attacks will drop thier loot."}
+	],
+	"edges":[
+		{"id":"30ffefeb78c9084f","fromNode":"4fede130c4d065d7","fromSide":"bottom","toNode":"e59694a070e77d28","toSide":"top"},
+		{"id":"948ce536a536c681","fromNode":"4fede130c4d065d7","fromSide":"bottom","toNode":"b975d6dfd5c96401","toSide":"top"},
+		{"id":"f4470c8939bb9295","fromNode":"4fede130c4d065d7","fromSide":"bottom","toNode":"e8b2dc32ed273f5b","toSide":"top"},
+		{"id":"073e9788baffa70d","fromNode":"e8b2dc32ed273f5b","fromSide":"bottom","toNode":"548eca1bac74ac2c","toSide":"top"},
+		{"id":"f9cd51d5529ec1dd","fromNode":"e59694a070e77d28","fromSide":"bottom","toNode":"65b9594155723893","toSide":"top"},
+		{"id":"be5f393c1f764743","fromNode":"b975d6dfd5c96401","fromSide":"bottom","toNode":"5e774b0ced837c07","toSide":"top"}
+	]
+}
