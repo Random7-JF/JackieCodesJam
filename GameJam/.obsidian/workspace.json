@@ -4,106 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "af3ecba6a719e281",
-        "type": "split",
+        "id": "fd449b872af1b079",
+        "type": "tabs",
         "children": [
           {
-            "id": "2479df111463cc14",
-            "type": "split",
-            "dimension": 60.20114942528736,
-            "children": [
-              {
-                "id": "6952dd643e3f4f94",
-                "type": "tabs",
-                "children": [
-                  {
-                    "id": "1ccff96c6c5a3e9e",
-                    "type": "leaf",
-                    "state": {
-                      "type": "canvas",
-                      "state": {
-                        "file": "Systems/Inventory/Inventory.canvas",
-                        "viewState": {
-                          "x": -34,
-                          "y": -83.2800614928367,
-                          "zoom": 0
-                        }
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "id": "e665ef59c1ac8643",
-                "type": "tabs",
-                "children": [
-                  {
-                    "id": "4e15a8e737b03f57",
-                    "type": "leaf",
-                    "state": {
-                      "type": "canvas",
-                      "state": {
-                        "file": "Systems/Alchemy/Alchemy.canvas",
-                        "viewState": {
-                          "x": 711.1487462235798,
-                          "y": 112.88310864735129,
-                          "zoom": -0.6666666666666666
-                        }
-                      }
-                    }
-                  }
-                ]
+            "id": "1b82c332ac5f1bbf",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Systems/Alchemy/Alchemy.canvas",
+                "viewState": {
+                  "x": 538.5,
+                  "y": 247,
+                  "zoom": 0
+                }
               }
-            ],
-            "direction": "vertical"
-          },
-          {
-            "id": "dccd55c3724d30cd",
-            "type": "split",
-            "dimension": 39.798850574712645,
-            "children": [
-              {
-                "id": "c702e3a3e6c44e00",
-                "type": "tabs",
-                "children": [
-                  {
-                    "id": "6d6925b9781a9f2e",
-                    "type": "leaf",
-                    "state": {
-                      "type": "excalidraw",
-                      "state": {
-                        "file": "Systems/Inventory/Diagram.md"
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "id": "fcad57aba5937601",
-                "type": "tabs",
-                "children": [
-                  {
-                    "id": "da82b548044eb3c1",
-                    "type": "leaf",
-                    "state": {
-                      "type": "canvas",
-                      "state": {
-                        "file": "Systems/Loot/Drops.canvas",
-                        "viewState": {
-                          "x": 129,
-                          "y": -67,
-                          "zoom": -0.3333333333333333
-                        }
-                      }
-                    }
-                  }
-                ]
-              }
-            ],
-            "direction": "vertical"
+            }
           }
-        ],
-        "direction": "horizontal"
+        ]
       }
     ],
     "direction": "vertical"
@@ -153,8 +72,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "52e8a9c87b6c15a2",
@@ -170,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Systems/Inventory/Diagram.md",
+                "file": "Systems/Alchemy/Alchemy.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -187,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Systems/Inventory/Diagram.md",
+                "file": "Systems/Alchemy/Alchemy.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -210,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Systems/Inventory/Diagram.md"
+                "file": "Systems/Alchemy/Alchemy.canvas"
               }
             }
           }
@@ -232,12 +150,12 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "6d6925b9781a9f2e",
+  "active": "1b82c332ac5f1bbf",
   "lastOpenFiles": [
-    "Systems/Alchemy/Alchemy.canvas",
     "Systems/Inventory/Diagram.md",
     "Systems/Inventory/Inventory.canvas",
     "Systems/Loot/Drops.canvas",
+    "Systems/Alchemy/Alchemy.canvas",
     "Brainstorming.md",
     "Systems/Loot",
     "Systems/Alchemy",
