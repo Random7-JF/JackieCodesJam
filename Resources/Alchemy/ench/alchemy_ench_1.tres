@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Alchemy" load_steps=3 format=3 uid="uid://c82vd4kel8shw"]
+
+[ext_resource type="Script" path="res://Resources/Alchemy/alchemy.gd" id="1_k2fcu"]
+[ext_resource type="Texture2D" uid="uid://cgjtalfts7p4t" path="res://Assets/16x16_Iconset_AlchemyXXL_v1_1/icons/bug_leg.png" id="2_ftb65"]
+
+[resource]
+script = ExtResource("1_k2fcu")
+name = "Ench 1"
+texture = ExtResource("2_ftb65")
+type = 2

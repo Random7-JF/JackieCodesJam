@@ -52,6 +52,8 @@ texture = ExtResource("1_ownax")
 hframes = 4
 
 [node name="Interact" parent="." instance=ExtResource("3_vj55l")]
+collision_layer = 4
+collision_mask = 6
 action_name = "Open"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact"]

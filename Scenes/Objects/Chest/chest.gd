@@ -8,12 +8,10 @@ var opened: bool = false
 
 func loot():
 	if player.use_key() && !opened:
-		print("used key")
 		anim.play("chest_open")
 		$Interact.deactivate()
 		opened = true
 	else:
-		print("need key")
 		interact.type = Interact.MessageType.Notify
 		interact.message = "Return with a Key and press [E]"
 
@@ -22,11 +20,8 @@ func _on_interact_body_entered(body):
 		print(body)
 		if body.is_in_group("player"):
 			$Interact.activate()
-			print("Player found")
-
 
 func _on_interact_body_exited(body):
 	if !opened:
 		if body.is_in_group("player"):
 			$Interact.deactivate()
-			print("Player Left")

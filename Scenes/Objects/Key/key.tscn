@@ -56,6 +56,8 @@ hframes = 4
 frame = 1
 
 [node name="Interact" parent="." instance=ExtResource("3_6qcx5")]
+collision_layer = 4
+collision_mask = 6
 action_name = "Pickup"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact"]

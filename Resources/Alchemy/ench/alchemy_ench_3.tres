@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Alchemy" load_steps=3 format=3 uid="uid://cacpetkhe73mg"]
+
+[ext_resource type="Script" path="res://Resources/Alchemy/alchemy.gd" id="1_4xgfu"]
+[ext_resource type="Texture2D" uid="uid://r2s48slhby0b" path="res://Assets/16x16_Iconset_AlchemyXXL_v1_1/icons/tentacle.png" id="2_ndtnk"]
+
+[resource]
+script = ExtResource("1_4xgfu")
+name = "Ench 3"
+texture = ExtResource("2_ndtnk")
+type = 2

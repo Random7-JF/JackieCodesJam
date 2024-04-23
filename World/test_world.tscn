@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dggl7av43bc8d"]
+[gd_scene load_steps=9 format=3 uid="uid://dggl7av43bc8d"]
 
 [ext_resource type="TileSet" uid="uid://drhb2svipclmh" path="res://World/TileSet.tres" id="1_xs5wr"]
 [ext_resource type="PackedScene" uid="uid://bkp587x31icjn" path="res://Scenes/Player/player.tscn" id="2_ycbsq"]
@@ -6,7 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://nhrct8f1p50x" path="res://Scenes/Objects/Chest/chest.tscn" id="4_bkpys"]
 [ext_resource type="PackedScene" uid="uid://da1i7ohb7qinm" path="res://Scenes/Objects/sign.tscn" id="5_n528u"]
 [ext_resource type="PackedScene" uid="uid://bb7ky0b7fem2x" path="res://Scenes/Objects/Box/box.tscn" id="6_ocfde"]
-[ext_resource type="PackedScene" uid="uid://dgbopk22sj467" path="res://Scenes/Objects/Item/blue_1_item.tscn" id="7_5qgq8"]
+[ext_resource type="PackedScene" uid="uid://ugkerxrpbyb4" path="res://Scenes/Objects/Item/item.tscn" id="8_84epy"]
+[ext_resource type="Resource" uid="uid://c82vd4kel8shw" path="res://Resources/Alchemy/alchemy_mod_1.tres" id="9_x5a6n"]
 
 [node name="test_world" type="Node2D"]
 
@@ -17,8 +18,6 @@ layer_0/tile_data = PackedInt32Array(327691, 65536, 2, 262155, 65536, 1, 196619,
 
 [node name="Player" parent="." instance=ExtResource("2_ycbsq")]
 position = Vector2(-83, 15)
-speed = 200.0
-jump_velocity = -350.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
@@ -33,7 +32,11 @@ position = Vector2(-38, 22)
 
 [node name="Box" parent="." node_paths=PackedStringArray("item_node") instance=ExtResource("6_ocfde")]
 position = Vector2(1, 19)
-items = Array[PackedScene]([ExtResource("7_5qgq8")])
+items = Array[PackedScene]([ExtResource("8_84epy")])
 item_node = NodePath("../Items")
 
 [node name="Items" type="Node2D" parent="."]
+
+[node name="Item" parent="." instance=ExtResource("8_84epy")]
+position = Vector2(57, -16)
+item_data = ExtResource("9_x5a6n")

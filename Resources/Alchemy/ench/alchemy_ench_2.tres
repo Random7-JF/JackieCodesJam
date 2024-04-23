@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Alchemy" load_steps=3 format=3 uid="uid://baduvxa54lvxn"]
+
+[ext_resource type="Script" path="res://Resources/Alchemy/alchemy.gd" id="1_rnx0p"]
+[ext_resource type="Texture2D" uid="uid://fr0st7bqwiv1" path="res://Assets/16x16_Iconset_AlchemyXXL_v1_1/icons/bat_wing.png" id="2_rvmno"]
+
+[resource]
+script = ExtResource("1_rnx0p")
+name = "Ench 2"
+texture = ExtResource("2_rvmno")
+type = 2

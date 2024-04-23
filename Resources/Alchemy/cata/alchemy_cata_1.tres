@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Alchemy" load_steps=3 format=3 uid="uid://c82vd4kel8shw"]
+
+[ext_resource type="Script" path="res://Resources/Alchemy/alchemy.gd" id="1_4ftky"]
+[ext_resource type="Texture2D" uid="uid://ptenhf33012g" path="res://Assets/16x16_Iconset_AlchemyXXL_v1_1/icons/monster_heart2.png" id="2_sho5l"]
+
+[resource]
+script = ExtResource("1_4ftky")
+name = "Blue Cata"
+texture = ExtResource("2_sho5l")
+type = 1

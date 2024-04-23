@@ -6,7 +6,7 @@
       {
         "id": "fd449b872af1b079",
         "type": "tabs",
-        "dimension": 44.79025710419486,
+        "dimension": 44.790257104194865,
         "children": [
           {
             "id": "1b82c332ac5f1bbf",
@@ -42,7 +42,7 @@
       {
         "id": "7ff3d695c3d927a6",
         "type": "tabs",
-        "dimension": 33.33333333333333,
+        "dimension": 33.333333333333336,
         "children": [
           {
             "id": "9a1353729bc5a133",
@@ -55,8 +55,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "2a79ab4bd81021c5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Project settings.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -122,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Todo/Notes/Item drop handling.md",
+                "file": "Todo/Notes/Weapon modify.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Todo/Notes/Item drop handling.md",
+                "file": "Todo/Notes/Weapon modify.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Todo/Notes/Item drop handling.md"
+                "file": "Todo/Notes/Weapon modify.md"
               }
             }
           }
@@ -184,10 +197,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "9a1353729bc5a133",
+  "active": "17cf90edba26a974",
   "lastOpenFiles": [
-    "Todo/WIP.md",
+    "Project settings.md",
     "Todo/Notes/Item drop handling.md",
+    "Todo/WIP.md",
     "Todo/Notes",
     "Todo/Notes/Weapon modify.md",
     "Brainstorming.md",
