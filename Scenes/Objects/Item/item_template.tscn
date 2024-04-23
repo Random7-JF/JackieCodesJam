@@ -1,6 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://c6qmtsucnftou"]
+[gd_scene load_steps=13 format=3 uid="uid://c6qmtsucnftou"]
 
 [ext_resource type="Script" path="res://Scenes/Objects/Item/item.gd" id="1_t05rh"]
+[ext_resource type="Resource" uid="uid://con33tu51bpkt" path="res://Resources/Alchemy/mod/alchemy_mod_2.tres" id="3_7w4ej"]
+[ext_resource type="Resource" uid="uid://ij068gj7sdvb" path="res://Resources/Alchemy/mod/alchemy_mod_3.tres" id="4_xe83n"]
 [ext_resource type="Resource" uid="uid://cut5kvn2xhhkm" path="res://Resources/Alchemy/cata/alchemy_cata_2.tres" id="6_53x5r"]
 [ext_resource type="Resource" uid="uid://dn58br1duyf1" path="res://Resources/Alchemy/cata/alchemy_cata_3.tres" id="7_d0oow"]
 [ext_resource type="Resource" uid="uid://c82vd4kel8shw" path="res://Resources/Alchemy/mod/alchemy_mod_1.tres" id="8_d0obs"]
@@ -18,7 +20,7 @@ size = Vector2(24, 18)
 collision_layer = 4
 collision_mask = 5
 script = ExtResource("1_t05rh")
-item_mod_data = Array[Resource("res://Resources/Alchemy/alchemy.gd")]([null])
+item_mod_data = Array[Resource("res://Resources/Alchemy/alchemy.gd")]([ExtResource("8_d0obs"), ExtResource("3_7w4ej"), ExtResource("4_xe83n")])
 item_cata_data = Array[Resource("res://Resources/Alchemy/alchemy.gd")]([ExtResource("8_d0obs"), ExtResource("6_53x5r"), ExtResource("7_d0oow")])
 item_ench_data = Array[Resource("res://Resources/Alchemy/alchemy.gd")]([ExtResource("8_d0obs"), ExtResource("9_oh2l0"), ExtResource("10_4a160")])
 

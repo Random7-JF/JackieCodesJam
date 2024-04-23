@@ -46,6 +46,8 @@ _data = {
 
 [node name="chest" type="Node2D" groups=["interactable"]]
 script = ExtResource("1_c4roi")
+item_min = 1
+item_max = 3
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_ownax")
@@ -64,6 +66,9 @@ shape = SubResource("RectangleShape2D_m16ud")
 libraries = {
 "": SubResource("AnimationLibrary_jp7fp")
 }
+
+[node name="Spawnpoint" type="Marker2D" parent="."]
+position = Vector2(0, -8)
 
 [connection signal="body_entered" from="Interact" to="." method="_on_interact_body_entered"]
 [connection signal="body_exited" from="Interact" to="." method="_on_interact_body_exited"]
