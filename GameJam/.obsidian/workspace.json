@@ -4,72 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "fd449b872af1b079",
-        "type": "tabs",
-        "dimension": 44.790257104194865,
-        "children": [
-          {
-            "id": "1b82c332ac5f1bbf",
-            "type": "leaf",
-            "state": {
-              "type": "kanban",
-              "state": {
-                "file": "Todo/WIP.md"
-              }
-            }
-          }
-        ]
-      },
-      {
         "id": "9af9951f35cc3a1e",
         "type": "tabs",
-        "dimension": 21.876409562471807,
         "children": [
           {
             "id": "17cf90edba26a974",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Todo/Notes/Weapon modify.md",
-                "mode": "source",
-                "source": false
+                "file": "Systems/Loot/Drops.canvas",
+                "viewState": {
+                  "x": 134.78561985691474,
+                  "y": -7.931721036217887,
+                  "zoom": 0.6666666666666667
+                }
               }
             }
           }
         ]
-      },
-      {
-        "id": "7ff3d695c3d927a6",
-        "type": "tabs",
-        "dimension": 33.333333333333336,
-        "children": [
-          {
-            "id": "9a1353729bc5a133",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Todo/Notes/Item drop handling.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2a79ab4bd81021c5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Project settings.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ],
-        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -135,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Todo/Notes/Weapon modify.md",
+                "file": "Systems/Loot/Drops.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Todo/Notes/Weapon modify.md",
+                "file": "Systems/Loot/Drops.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Todo/Notes/Weapon modify.md"
+                "file": "Systems/Loot/Drops.canvas"
               }
             }
           }
@@ -199,11 +152,11 @@
   },
   "active": "17cf90edba26a974",
   "lastOpenFiles": [
+    "Todo/Notes/Weapon modify.md",
     "Project settings.md",
     "Todo/Notes/Item drop handling.md",
     "Todo/WIP.md",
     "Todo/Notes",
-    "Todo/Notes/Weapon modify.md",
     "Brainstorming.md",
     "Todo",
     "Systems/Loot/Drops.canvas",

@@ -1,0 +1,42 @@
+[gd_scene load_steps=11 format=3 uid="uid://c6qmtsucnftou"]
+
+[ext_resource type="Script" path="res://Scenes/Objects/Item/item.gd" id="1_t05rh"]
+[ext_resource type="Resource" uid="uid://cut5kvn2xhhkm" path="res://Resources/Alchemy/cata/alchemy_cata_2.tres" id="6_53x5r"]
+[ext_resource type="Resource" uid="uid://dn58br1duyf1" path="res://Resources/Alchemy/cata/alchemy_cata_3.tres" id="7_d0oow"]
+[ext_resource type="Resource" uid="uid://c82vd4kel8shw" path="res://Resources/Alchemy/mod/alchemy_mod_1.tres" id="8_d0obs"]
+[ext_resource type="Resource" uid="uid://baduvxa54lvxn" path="res://Resources/Alchemy/ench/alchemy_ench_2.tres" id="9_oh2l0"]
+[ext_resource type="Resource" uid="uid://cacpetkhe73mg" path="res://Resources/Alchemy/ench/alchemy_ench_3.tres" id="10_4a160"]
+[ext_resource type="Texture2D" uid="uid://b8yc85i02k20t" path="res://Assets/16x16_Iconset_AlchemyXXL_v1_1/icons/monster_part4.png" id="11_v66vu"]
+[ext_resource type="PackedScene" uid="uid://bc1a25xruo0sk" path="res://Scenes/Objects/Interact/interact.tscn" id="12_k3ce3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qwb0k"]
+size = Vector2(24, 18)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ajmmu"]
+
+[node name="Item" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 5
+script = ExtResource("1_t05rh")
+item_mod_data = Array[Resource("res://Resources/Alchemy/alchemy.gd")]([null])
+item_cata_data = Array[Resource("res://Resources/Alchemy/alchemy.gd")]([ExtResource("8_d0obs"), ExtResource("6_53x5r"), ExtResource("7_d0oow")])
+item_ench_data = Array[Resource("res://Resources/Alchemy/alchemy.gd")]([ExtResource("8_d0obs"), ExtResource("9_oh2l0"), ExtResource("10_4a160")])
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("11_v66vu")
+
+[node name="Interact" parent="." instance=ExtResource("12_k3ce3")]
+collision_layer = 4
+collision_mask = 6
+action_name = "Pickup"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact"]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_qwb0k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("CapsuleShape2D_ajmmu")
+
+[connection signal="body_entered" from="Interact" to="." method="_on_interact_body_entered"]
+[connection signal="body_exited" from="Interact" to="." method="_on_interact_body_exited"]

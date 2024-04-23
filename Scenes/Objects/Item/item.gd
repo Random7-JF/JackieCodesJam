@@ -1,26 +1,27 @@
 extends RigidBody2D
+class_name Item
 
 @export var item_mod_data: Array[Alchemy]
 @export var item_cata_data: Array[Alchemy]
 @export var item_ench_data: Array[Alchemy]
 
-@export var type: Alchemy.alchemy_type
-@export var spawn_time: float
+@export var spawn_time: float = 0.5
 
 var alive_time: float
 var spawning: bool = true
 var item_id: int
 
 func pick_item(type: Alchemy.alchemy_type):
+	print("Picking Item")
 	match type:
 		Alchemy.alchemy_type.modifier:
-			item_id = randi_range(0, item_mod_data.size())
+			item_id = randi_range(0, item_mod_data.size()-1)
 			$Sprite.texture = item_mod_data[item_id].texture
 		Alchemy.alchemy_type.catalyst:
-			item_id = randi_range(0, item_cata_data.size())
+			item_id = randi_range(0, item_cata_data.size()-1)
 			$Sprite.texture = item_cata_data[item_id].texture
 		Alchemy.alchemy_type.catalyst:
-			item_id = randi_range(0, item_cata_data.size())
+			item_id = randi_range(0, item_cata_data.size()-1)
 			$Sprite.texture = item_ench_data[item_id].texture
 
 func _process(delta):
