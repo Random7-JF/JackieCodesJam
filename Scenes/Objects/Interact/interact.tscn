@@ -7,6 +7,7 @@
 script = ExtResource("1_1m735")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
+visible = false
 z_index = 20
 texture_filter = 1
 anchors_preset = 5

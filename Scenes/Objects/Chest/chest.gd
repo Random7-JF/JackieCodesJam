@@ -1,19 +1,32 @@
 extends Node2D
 
 @onready var anim: AnimationPlayer = $AnimationPlayer
+@onready var interact: Interact = $Interact
+@onready var player: Player = get_tree().get_first_node_in_group("player")
 
-func _ready():
-	pass
+var opened: bool = false
 
+func loot():
+	if player.use_key() && !opened:
+		print("used key")
+		anim.play("chest_open")
+		$Interact.deactivate()
+		opened = true
+	else:
+		print("need key")
+		interact.type = Interact.MessageType.Notify
+		interact.message = "Return with a Key and press [E]"
 
 func _on_interact_body_entered(body):
-	print(body)
-	if body.is_in_group("player"):
-		$Interact.activate()
-		print("Player found")
+	if !opened:
+		print(body)
+		if body.is_in_group("player"):
+			$Interact.activate()
+			print("Player found")
 
 
 func _on_interact_body_exited(body):
-	if body.is_in_group("player"):
-		$Interact.deactivate()
-		print("Player Left")
+	if !opened:
+		if body.is_in_group("player"):
+			$Interact.deactivate()
+			print("Player Left")

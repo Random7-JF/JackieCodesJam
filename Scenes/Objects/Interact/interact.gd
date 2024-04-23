@@ -17,6 +17,12 @@ func _ready():
 	elif type == MessageType.Notify:
 		label.text = message
 	panel.visible = false
+	
+func _process(_delta):
+	if type == MessageType.Interact:
+		label.text = "[E] to " + action_name
+	elif type == MessageType.Notify:
+		label.text = message
 
 func activate():
 	panel.visible = true

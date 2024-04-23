@@ -46,7 +46,7 @@ _data = {
 "key_bounce": SubResource("Animation_ssjuh")
 }
 
-[node name="key" type="Node2D"]
+[node name="key" type="Node2D" groups=["interactable"]]
 script = ExtResource("1_prot4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

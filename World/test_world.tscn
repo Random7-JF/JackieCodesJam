@@ -17,6 +17,8 @@ layer_0/tile_data = PackedInt32Array(327691, 65536, 2, 262155, 65536, 1, 196619,
 
 [node name="Player" parent="." instance=ExtResource("2_ycbsq")]
 position = Vector2(-83, 15)
+speed = 200.0
+jump_velocity = -350.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
