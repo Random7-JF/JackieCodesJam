@@ -11,14 +11,9 @@
             "id": "17cf90edba26a974",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "kanban",
               "state": {
-                "file": "Systems/Loot/Drops.canvas",
-                "viewState": {
-                  "x": 134.78561985691474,
-                  "y": -7.931721036217887,
-                  "zoom": 0.6666666666666667
-                }
+                "file": "Todo/WIP.md"
               }
             }
           }
@@ -88,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Systems/Loot/Drops.canvas",
+                "file": "Todo/WIP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Systems/Loot/Drops.canvas",
+                "file": "Todo/WIP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Systems/Loot/Drops.canvas"
+                "file": "Todo/WIP.md"
               }
             }
           }
@@ -152,17 +147,20 @@
   },
   "active": "17cf90edba26a974",
   "lastOpenFiles": [
-    "Todo/Notes/Weapon modify.md",
-    "Project settings.md",
-    "Todo/Notes/Item drop handling.md",
-    "Todo/WIP.md",
-    "Todo/Notes",
-    "Brainstorming.md",
-    "Todo",
-    "Systems/Loot/Drops.canvas",
-    "Systems/Alchemy/Alchemy.canvas",
     "Systems/Inventory/Diagram.md",
     "Systems/Inventory/Inventory.canvas",
+    "Project settings.md",
+    "Brainstorming.md",
+    "Todo/WIP.md",
+    "Todo/Notes/Crafting.md",
+    "Todo/Notes/Enemies.md",
+    "Todo/Notes/Health system for player.md",
+    "Todo/Notes/Item drop handling.md",
+    "Todo/Notes/Weapon modify.md",
+    "Systems/Loot/Drops.canvas",
+    "Todo/Notes",
+    "Todo",
+    "Systems/Alchemy/Alchemy.canvas",
     "Systems/Loot",
     "Systems/Alchemy",
     "Systems/Inventory",

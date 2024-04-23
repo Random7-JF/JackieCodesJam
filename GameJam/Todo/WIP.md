@@ -6,12 +6,16 @@ kanban-plugin: basic
 
 ## Need to research
 
-- [ ] [[Item drop handling]]
 - [ ] [[Weapon modify]]
+- [ ] [[Enemies]]
+- [ ] [[Crafting]]
+- [ ] [[Health system for player]]
+- [ ] Move UI elements to canvas
 
 
 ## Implementing
 
+- [ ] [[Item drop handling]]
 
 
 ## Testing
