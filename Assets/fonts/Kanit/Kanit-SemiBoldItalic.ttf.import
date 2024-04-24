@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://drw4b0tpkk4gh"
-path="res://.godot/imported/AeogoPixellated-Regular.ttf-9fd3e590ae6e076285dd8eb1830851c3.fontdata"
+uid="uid://ct4tti5loh7a7"
+path="res://.godot/imported/Kanit-SemiBoldItalic.ttf-2dbfb7662a0ac1677ff934d284b5f28c.fontdata"
 
 [deps]
 
-source_file="res://Assets/aeogo_pixellated/AeogoPixellated-Regular.ttf"
-dest_files=["res://.godot/imported/AeogoPixellated-Regular.ttf-9fd3e590ae6e076285dd8eb1830851c3.fontdata"]
+source_file="res://Assets/fonts/Kanit/Kanit-SemiBoldItalic.ttf"
+dest_files=["res://.godot/imported/Kanit-SemiBoldItalic.ttf-2dbfb7662a0ac1677ff934d284b5f28c.fontdata"]
 
 [params]
 
@@ -27,12 +27,7 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[{
-"chars": [],
-"glyphs": [],
-"name": "New Configuration",
-"size": Vector2i(16, 0)
-}]
+preload=[]
 language_support={}
 script_support={}
 opentype_features={}

@@ -1,0 +1,16 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://qpgwmwtiuhw4"]
+
+[ext_resource type="FontFile" path="res://Assets/Jersey_25/Jersey25-Regular.ttf" id="1_22ifu"]
+[ext_resource type="FontFile" uid="uid://fb7ojtussq0d" path="res://Assets/fonts/kenney_kenney-fonts/Kenney Pixel Square.ttf" id="2_ditgk"]
+
+[sub_resource type="FontVariation" id="FontVariation_7w4ax"]
+base_font = ExtResource("1_22ifu")
+
+[resource]
+default_font = SubResource("FontVariation_7w4ax")
+default_font_size = 12
+Fonts/fonts/normal = SubResource("FontVariation_7w4ax")
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("2_ditgk")

@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cn4wht8xi0hf3"
-path="res://.godot/imported/AeogoPixellated-Regular.woff-b3d3a83b5a2c7be8931dc4f3aea21919.fontdata"
+uid="uid://djd66nuucc23j"
+path="res://.godot/imported/Kenney Future Narrow.ttf-ff2e686a667c8d8d6b5c61f52e6b7d1c.fontdata"
 
 [deps]
 
-source_file="res://Assets/aeogo_pixellated/AeogoPixellated-Regular.woff"
-dest_files=["res://.godot/imported/AeogoPixellated-Regular.woff-b3d3a83b5a2c7be8931dc4f3aea21919.fontdata"]
+source_file="res://Assets/fonts/kenney_kenney-fonts/Kenney Future Narrow.ttf"
+dest_files=["res://.godot/imported/Kenney Future Narrow.ttf-ff2e686a667c8d8d6b5c61f52e6b7d1c.fontdata"]
 
 [params]
 

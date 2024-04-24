@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://btsvdlujicqx6"]
+
+[ext_resource type="Texture2D" uid="uid://df6ohe4gi6a1x" path="res://Assets/free-swamp-game-tileset-pixel-art/4 Animated objects/key-single.png" id="1_e2foe"]
+[ext_resource type="FontFile" uid="uid://fb7ojtussq0d" path="res://Assets/fonts/kenney_kenney-fonts/Kenney Pixel Square.ttf" id="1_wu5jf"]
+
+[node name="Health" type="PanelContainer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -45.0
+offset_right = 97.0
+offset_bottom = -5.0
+grow_vertical = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_wu5jf")
+text = "HP"
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e2foe")
+expand_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e2foe")
+expand_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e2foe")
+expand_mode = 3
+
+[node name="TextureRect4" type="TextureRect" parent="CenterContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_e2foe")
+expand_mode = 3

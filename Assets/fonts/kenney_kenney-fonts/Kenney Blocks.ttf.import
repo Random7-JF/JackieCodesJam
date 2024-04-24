@@ -2,18 +2,18 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://gjaf2aoihyg1"
-path="res://.godot/imported/Jersey25-Regular.ttf-e568bce10f50f4243b18884274154a2e.fontdata"
+uid="uid://svjll3dq823s"
+path="res://.godot/imported/Kenney Blocks.ttf-e5c9cd595ebfac61654fd1ad106d509f.fontdata"
 
 [deps]
 
-source_file="res://Assets/Jersey_25/Jersey25-Regular.ttf"
-dest_files=["res://.godot/imported/Jersey25-Regular.ttf-e568bce10f50f4243b18884274154a2e.fontdata"]
+source_file="res://Assets/fonts/kenney_kenney-fonts/Kenney Blocks.ttf"
+dest_files=["res://.godot/imported/Kenney Blocks.ttf-e5c9cd595ebfac61654fd1ad106d509f.fontdata"]
 
 [params]
 
 Rendering=null
-antialiasing=0
+antialiasing=1
 generate_mipmaps=false
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
@@ -21,7 +21,7 @@ msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
 hinting=1
-subpixel_positioning=0
+subpixel_positioning=1
 oversampling=0.0
 Fallbacks=null
 fallbacks=[]

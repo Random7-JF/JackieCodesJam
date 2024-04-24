@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dggl7av43bc8d"]
+[gd_scene load_steps=8 format=3 uid="uid://dggl7av43bc8d"]
 
 [ext_resource type="TileSet" uid="uid://drhb2svipclmh" path="res://World/TileSet.tres" id="1_xs5wr"]
 [ext_resource type="PackedScene" uid="uid://bkp587x31icjn" path="res://Scenes/Player/player.tscn" id="2_ycbsq"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://nhrct8f1p50x" path="res://Scenes/Objects/Chest/chest.tscn" id="4_bkpys"]
 [ext_resource type="PackedScene" uid="uid://da1i7ohb7qinm" path="res://Scenes/Objects/sign.tscn" id="5_n528u"]
 [ext_resource type="PackedScene" uid="uid://bb7ky0b7fem2x" path="res://Scenes/Objects/Box/box.tscn" id="6_ocfde"]
+[ext_resource type="PackedScene" uid="uid://bd27ssmk5jsjx" path="res://Scenes/UI/game_ui.tscn" id="7_4c8a2"]
 
 [node name="test_world" type="Node2D"]
 
@@ -34,3 +35,5 @@ position = Vector2(-38, 22)
 position = Vector2(10, 19)
 item_min = 1
 item_max = 3
+
+[node name="Game UI" parent="." instance=ExtResource("7_4c8a2")]

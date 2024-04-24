@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://beo2cv8bul8kh"
-path="res://.godot/imported/AeogoPixellated-Regular.woff2-a279a5cbb5824c18f553e8b41bf61c5c.fontdata"
+uid="uid://chx4tprtkkkh3"
+path="res://.godot/imported/Kanit-SemiBold.ttf-efadaf95334e91e373fc705ac5b6b4e4.fontdata"
 
 [deps]
 
-source_file="res://Assets/aeogo_pixellated/AeogoPixellated-Regular.woff2"
-dest_files=["res://.godot/imported/AeogoPixellated-Regular.woff2-a279a5cbb5824c18f553e8b41bf61c5c.fontdata"]
+source_file="res://Assets/fonts/Kanit/Kanit-SemiBold.ttf"
+dest_files=["res://.godot/imported/Kanit-SemiBold.ttf-efadaf95334e91e373fc705ac5b6b4e4.fontdata"]
 
 [params]
 

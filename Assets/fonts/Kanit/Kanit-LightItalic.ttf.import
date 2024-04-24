@@ -2,18 +2,18 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://lv8e5xgyf41l"
-path="res://.godot/imported/AeogoPixellated-Regular.otf-ee001149fe7bcaf7b75b2df8ebaf8618.fontdata"
+uid="uid://np6821a4tw88"
+path="res://.godot/imported/Kanit-LightItalic.ttf-65c41c780db3361088547ba5aa2d4ac0.fontdata"
 
 [deps]
 
-source_file="res://Assets/aeogo_pixellated/AeogoPixellated-Regular.otf"
-dest_files=["res://.godot/imported/AeogoPixellated-Regular.otf-ee001149fe7bcaf7b75b2df8ebaf8618.fontdata"]
+source_file="res://Assets/fonts/Kanit/Kanit-LightItalic.ttf"
+dest_files=["res://.godot/imported/Kanit-LightItalic.ttf-65c41c780db3361088547ba5aa2d4ac0.fontdata"]
 
 [params]
 
 Rendering=null
-antialiasing=0
+antialiasing=1
 generate_mipmaps=false
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
@@ -21,7 +21,7 @@ msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
 hinting=1
-subpixel_positioning=0
+subpixel_positioning=1
 oversampling=0.0
 Fallbacks=null
 fallbacks=[]
