@@ -1,13 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://bwglnxbnl7ujj"]
+[gd_scene load_steps=3 format=3 uid="uid://bwglnxbnl7ujj"]
 
 [ext_resource type="FontFile" uid="uid://fb7ojtussq0d" path="res://Assets/fonts/kenney_kenney-fonts/Kenney Pixel Square.ttf" id="1_4au7c"]
+[ext_resource type="Texture2D" uid="uid://du5w6ju6kormt" path="res://Assets/16x16_Iconset_AlchemyXXL_v1_1/icons/medium_potion_empty.png" id="2_u7q2k"]
 
 [node name="Hotbar" type="PanelContainer"]
 texture_filter = 1
+size_flags_horizontal = 4
+size_flags_vertical = 4
 size_flags_stretch_ratio = 4.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Seperator" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2(10, 5)
+layout_mode = 2
+size_flags_horizontal = 0
 
 [node name="Label" type="Label" parent="HBoxContainer"]
 texture_filter = 1
@@ -17,4 +27,61 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("1_4au7c")
-text = "Weapon"
+theme_override_font_sizes/font_size = 10
+text = "Weapon: "
+
+[node name="Weapon" type="Label" parent="HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.176471, 0.129412, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("1_4au7c")
+theme_override_font_sizes/font_size = 10
+text = "Sword"
+
+[node name="Seperator2" type="Control" parent="HBoxContainer"]
+custom_minimum_size = Vector2(10, 5)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Potion Label" type="Label" parent="HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("1_4au7c")
+theme_override_font_sizes/font_size = 10
+text = "Potions:"
+
+[node name="Potion 1" type="TextureRect" parent="HBoxContainer"]
+modulate = Color(0.321569, 0.321569, 0.321569, 1)
+layout_mode = 2
+texture = ExtResource("2_u7q2k")
+expand_mode = 3
+stretch_mode = 3
+
+[node name="Potion 2" type="TextureRect" parent="HBoxContainer"]
+modulate = Color(0.321569, 0.321569, 0.321569, 1)
+layout_mode = 2
+texture = ExtResource("2_u7q2k")
+expand_mode = 3
+stretch_mode = 3
+
+[node name="Potion 3" type="TextureRect" parent="HBoxContainer"]
+modulate = Color(0.321569, 0.321569, 0.321569, 1)
+layout_mode = 2
+texture = ExtResource("2_u7q2k")
+expand_mode = 3
+stretch_mode = 3
+
+[node name="Potion 4" type="TextureRect" parent="HBoxContainer"]
+modulate = Color(0.321569, 0.321569, 0.321569, 1)
+layout_mode = 2
+texture = ExtResource("2_u7q2k")
+expand_mode = 3
+stretch_mode = 3

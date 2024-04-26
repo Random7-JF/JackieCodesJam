@@ -4,46 +4,49 @@
 [ext_resource type="FontFile" uid="uid://fb7ojtussq0d" path="res://Assets/fonts/kenney_kenney-fonts/Kenney Pixel Square.ttf" id="1_wu5jf"]
 
 [node name="Health" type="PanelContainer"]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 5.0
-offset_top = -45.0
-offset_right = 97.0
-offset_bottom = -5.0
-grow_vertical = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 84.0
+offset_bottom = 22.0
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Margin"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="CenterContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Margin/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_offset_y = 2
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("1_wu5jf")
-text = "HP"
+theme_override_font_sizes/font_size = 10
+text = "HP:"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="CenterContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Margin/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e2foe")
-expand_mode = 3
+stretch_mode = 3
 
-[node name="TextureRect2" type="TextureRect" parent="CenterContainer/HBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="Margin/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e2foe")
-expand_mode = 3
+stretch_mode = 3
 
-[node name="TextureRect3" type="TextureRect" parent="CenterContainer/HBoxContainer"]
+[node name="TextureRect3" type="TextureRect" parent="Margin/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e2foe")
-expand_mode = 3
+stretch_mode = 3
 
-[node name="TextureRect4" type="TextureRect" parent="CenterContainer/HBoxContainer"]
+[node name="TextureRect4" type="TextureRect" parent="Margin/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("1_e2foe")
-expand_mode = 3
+stretch_mode = 3

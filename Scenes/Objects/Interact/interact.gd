@@ -4,28 +4,18 @@ class_name Interact
 @export var type : MessageType = MessageType.Interact
 @export var action_name: String = "Interact"
 @export var message: String = "Message"
-@onready var label: Label = $PanelContainer/Label
-@onready var panel: PanelContainer = $PanelContainer 
+
+@onready var message_box: MessageBox = get_tree().get_first_node_in_group("messagebox")
 
 enum MessageType {
 	Interact, Notify
 }
 
-func _ready():
-	if type == MessageType.Interact:
-		label.text = "[E] to " + action_name
-	elif type == MessageType.Notify:
-		label.text = message
-	panel.visible = false
-	
-func _process(_delta):
-	if type == MessageType.Interact:
-		label.text = "[E] to " + action_name
-	elif type == MessageType.Notify:
-		label.text = message
-
 func activate():
-	panel.visible = true
-	
+	if type == MessageType.Interact:
+		message_box.update("[E] to " + action_name)
+	elif type == MessageType.Notify:
+		message_box.update(message)
+
 func deactivate():
-	panel.visible = false
+	message_box.hide_box()

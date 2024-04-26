@@ -36,7 +36,6 @@ func spawn_items():
 
 func _on_interact_body_entered(body):
 	if !opened:
-		print(body)
 		if body.is_in_group("player"):
 			$Interact.activate()
 
