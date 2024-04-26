@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkjkrh6pys8n6"]
+[gd_scene load_steps=4 format=3 uid="uid://dkjkrh6pys8n6"]
 
 [ext_resource type="Texture2D" uid="uid://df6ohe4gi6a1x" path="res://Assets/free-swamp-game-tileset-pixel-art/4 Animated objects/key-single.png" id="1_6rlal"]
+[ext_resource type="Script" path="res://Scenes/UI/Keys/keys.gd" id="1_cg8e8"]
 [ext_resource type="FontFile" uid="uid://fb7ojtussq0d" path="res://Assets/fonts/kenney_kenney-fonts/Kenney Pixel Square.ttf" id="2_mfhqt"]
 
 [node name="Keys" type="PanelContainer"]
@@ -12,6 +13,7 @@ offset_top = 2.0
 offset_right = -2.0
 offset_bottom = 30.0
 grow_horizontal = 0
+script = ExtResource("1_cg8e8")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -36,4 +38,4 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
 theme_override_constants/shadow_outline_size = 2
 theme_override_fonts/font = ExtResource("2_mfhqt")
-text = "000"
+text = "0"

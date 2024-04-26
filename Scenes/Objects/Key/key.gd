@@ -11,7 +11,7 @@ func loot():
 	print("loot")
 	if lootable:
 		var player: Player = get_tree().get_first_node_in_group("player")
-		player.keys += 1
+		player.add_key()
 		lootable = false
 		call_deferred("queue_free")
 

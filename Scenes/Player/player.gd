@@ -1,6 +1,8 @@
 extends CharacterBody2D
 class_name Player
 
+signal update_key(keys: int)
+
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var attack_sword_area: Area2D = $AttackSword
 @onready var inventory = get_tree().get_first_node_in_group("inventory")
@@ -14,7 +16,6 @@ var can_double_jump: bool = true
 var can_interact: bool = false
 var keys: int = 0
 var inventory_opened: bool = false
-
 
 
 func _process(_delta):
@@ -83,10 +84,12 @@ func _on_animation_tree_animation_finished(anim_name):
  
 func add_key() -> void:
 	keys += 1
+	emit_signal("update_key", keys)
 
 func use_key() -> bool:
 	if keys > 0:
 		keys -= 1
+		emit_signal("update_key", keys)
 		return true
 	else:
 		return false
