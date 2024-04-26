@@ -68,7 +68,7 @@ libraries = {
 }
 
 [node name="Spawnpoint" type="Marker2D" parent="."]
-position = Vector2(0, -8)
+position = Vector2(-21, 0)
 
 [connection signal="body_entered" from="Interact" to="." method="_on_interact_body_entered"]
 [connection signal="body_exited" from="Interact" to="." method="_on_interact_body_exited"]

@@ -10,12 +10,10 @@ kanban-plugin: basic
 - [ ] [[Enemies]]
 - [ ] [[Crafting]]
 - [ ] [[Health system for player]]
-- [ ] Move UI elements to canvas
 
 
 ## Implementing
 
-- [ ] [[Item drop handling]]
 
 
 ## Testing
@@ -25,6 +23,8 @@ kanban-plugin: basic
 ## Completed
 
 **Complete**
+- [x] [[Item drop handling]]
+- [x] Move UI elements to canvas
 
 
 

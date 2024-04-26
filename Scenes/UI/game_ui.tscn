@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bd27ssmk5jsjx"]
+[gd_scene load_steps=8 format=3 uid="uid://bd27ssmk5jsjx"]
 
 [ext_resource type="PackedScene" uid="uid://btsvdlujicqx6" path="res://Scenes/UI/Health/health.tscn" id="1_rh5fl"]
 [ext_resource type="PackedScene" uid="uid://dkjkrh6pys8n6" path="res://Scenes/UI/Keys/keys.tscn" id="2_mqdcl"]
+[ext_resource type="Script" path="res://Scenes/UI/Inventory_and_crafting.gd" id="3_8wqx7"]
 [ext_resource type="PackedScene" uid="uid://4f6ujncd4dyq" path="res://Scenes/UI/MessageBox/message_box.tscn" id="3_36c12"]
+[ext_resource type="PackedScene" uid="uid://daqvf7pnjfn3i" path="res://Scenes/UI/Inventory/inventory.tscn" id="3_yjqhq"]
+[ext_resource type="PackedScene" uid="uid://bsnolco2yliwu" path="res://Scenes/UI/Inventory/crafting.tscn" id="4_c4o85"]
 [ext_resource type="PackedScene" uid="uid://bwglnxbnl7ujj" path="res://Scenes/UI/Hotbar/hotbar.tscn" id="4_jq705"]
 
 [node name="Game UI" type="CanvasLayer"]
@@ -24,6 +27,28 @@ size_flags_horizontal = 2
 [node name="Keys" parent="Top" instance=ExtResource("2_mqdcl")]
 layout_mode = 2
 size_flags_horizontal = 10
+
+[node name="Inventory And Crafting" type="HBoxContainer" parent="." groups=["inventory"]]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.0
+offset_top = -119.0
+offset_right = 98.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+script = ExtResource("3_8wqx7")
+
+[node name="Inventory" parent="Inventory And Crafting" instance=ExtResource("3_yjqhq")]
+layout_mode = 2
+
+[node name="Crafting" parent="Inventory And Crafting" instance=ExtResource("4_c4o85")]
+layout_mode = 2
 
 [node name="Message" type="HBoxContainer" parent="."]
 anchors_preset = 7

@@ -3,6 +3,7 @@ class_name Player
 
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var attack_sword_area: Area2D = $AttackSword
+@onready var inventory = get_tree().get_first_node_in_group("inventory")
 
 @export var speed = 200.0
 @export var jump_velocity = -350.0
@@ -12,6 +13,7 @@ var can_double_jump: bool = true
 
 var can_interact: bool = false
 var keys: int = 0
+var inventory_opened: bool = false
 
 
 
@@ -20,6 +22,13 @@ func _process(_delta):
 		interact()		
 	if Input.is_action_just_pressed("attack"):
 		attack()
+	if Input.is_action_just_pressed("inventory"):
+		if inventory_opened:
+			inventory.close_inventory()
+			inventory_opened = false
+		else:
+			inventory.open_inventory()
+			inventory_opened = true
 	update_animation()
 
 func _physics_process(delta):

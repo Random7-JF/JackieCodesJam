@@ -12,9 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://bc1a25xruo0sk" path="res://Scenes/Objects/Interact/interact.tscn" id="12_k3ce3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qwb0k"]
-size = Vector2(24, 18)
+size = Vector2(34, 23)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ajmmu"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_puthb"]
+size = Vector2(15, 16)
 
 [node name="Item" type="RigidBody2D"]
 collision_layer = 4
@@ -33,12 +34,12 @@ collision_mask = 6
 action_name = "Pickup"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interact"]
-position = Vector2(0, -3)
+position = Vector2(0, -5.5)
 shape = SubResource("RectangleShape2D_qwb0k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -3)
-shape = SubResource("CapsuleShape2D_ajmmu")
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_puthb")
 
 [connection signal="body_entered" from="Interact" to="." method="_on_interact_body_entered"]
 [connection signal="body_exited" from="Interact" to="." method="_on_interact_body_exited"]

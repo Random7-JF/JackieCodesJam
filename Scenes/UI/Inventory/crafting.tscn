@@ -1,0 +1,175 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsnolco2yliwu"]
+
+[ext_resource type="FontFile" uid="uid://fb7ojtussq0d" path="res://Assets/fonts/kenney_kenney-fonts/Kenney Pixel Square.ttf" id="1_r3co7"]
+[ext_resource type="Texture2D" uid="uid://fr0st7bqwiv1" path="res://Assets/16x16_Iconset_AlchemyXXL_v1_1/icons/bat_wing.png" id="2_grkae"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6i7kw"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.490196, 0.239216, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+
+[node name="Crafting" type="PanelContainer"]
+custom_minimum_size = Vector2(100, 150)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6i7kw")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Crafting Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("1_r3co7")
+theme_override_font_sizes/font_size = 10
+text = "Crafting"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Seperator" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(10, 5)
+layout_mode = 2
+
+[node name="Ingredients" type="CenterContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Ingredients"]
+modulate = Color(0.141176, 0.141176, 0.141176, 1)
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("2_grkae")
+
+[node name="Ingredients2" type="CenterContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Ingredients2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Ingredients2/HBoxContainer"]
+modulate = Color(0.141176, 0.141176, 0.141176, 1)
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("2_grkae")
+
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/Ingredients2/HBoxContainer"]
+modulate = Color(0.141176, 0.141176, 0.141176, 1)
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("2_grkae")
+
+[node name="Seperator2" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(10, 5)
+layout_mode = 2
+
+[node name="RecipeResults" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Modifier" type="Label" parent="VBoxContainer/RecipeResults"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("1_r3co7")
+theme_override_font_sizes/font_size = 8
+text = "Modifier:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Modifier Effect" type="Label" parent="VBoxContainer/RecipeResults"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("1_r3co7")
+theme_override_font_sizes/font_size = 8
+text = "STR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Catalyst" type="Label" parent="VBoxContainer/RecipeResults"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("1_r3co7")
+theme_override_font_sizes/font_size = 8
+text = "Catalyst:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Catalyst Effect" type="Label" parent="VBoxContainer/RecipeResults"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("1_r3co7")
+theme_override_font_sizes/font_size = 8
+text = "2 Min"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Enhancement" type="Label" parent="VBoxContainer/RecipeResults"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("1_r3co7")
+theme_override_font_sizes/font_size = 8
+text = "Enhancement:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Enhancement Effect" type="Label" parent="VBoxContainer/RecipeResults"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("1_r3co7")
+theme_override_font_sizes/font_size = 8
+text = "Fire"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Seperator3" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(10, 5)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_r3co7")
+theme_override_font_sizes/font_size = 10
+text = "Craft"
