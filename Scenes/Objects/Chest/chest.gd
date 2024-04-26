@@ -25,6 +25,7 @@ func loot():
 	else:
 		interact.type = Interact.MessageType.Notify
 		interact.message = "Return with a Key and press [E]"
+	$Interact.update_message()
 
 func spawn_items():
 	var item_count: int = randi_range(item_min, item_max)

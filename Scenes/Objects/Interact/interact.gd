@@ -10,7 +10,12 @@ class_name Interact
 enum MessageType {
 	Interact, Notify
 }
-
+func update_message():
+	if type == MessageType.Interact:
+		message_box.update_message("[E] to " + action_name)
+	elif type == MessageType.Notify:
+		message_box.update_message(message)
+	
 func activate():
 	if type == MessageType.Interact:
 		message_box.update("[E] to " + action_name)

@@ -6,6 +6,9 @@ class_name MessageBox
 func _ready():
 	visible = false
 
+func update_message(message: String):
+	label.text = message
+	
 func update(message: String):
 	label.text = message
 	visible = true
